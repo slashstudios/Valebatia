@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>gameName.spritefont</Source>
+      <Name>gameName</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\gameName.xnb</Output>
+      <Time>2014-11-22T21:36:08-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\player.png</Source>
+      <Name>Images\player</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\player.xnb</Output>
+      <Time>2015-01-15T09:54:49.3639894-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\background.png</Source>
+      <Name>Images\background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\background.xnb</Output>
+      <Time>2015-01-07T12:30:37.0427256-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\tile.png</Source>
+      <Name>Images\tile</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\tile.xnb</Output>
+      <Time>2015-01-07T20:56:30.2767341-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Borealis.mp3</Source>
+      <Name>Music\Borealis</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Borealis.xnb</Output>
+      <Extra>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Borealis.wma</Extra>
+      <Time>2015-01-30T09:51:38.3809945-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Spark.mp3</Source>
+      <Name>Music\Spark</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Spark.xnb</Output>
+      <Extra>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Spark.wma</Extra>
+      <Time>2015-01-30T09:52:30.7432537-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\general_gps.mp3</Source>
+      <Name>Music\general_gps</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\general_gps.xnb</Output>
+      <Extra>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\general_gps.wma</Extra>
+      <Time>2015-01-30T09:52:53.7438738-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\The Kraken.mp3</Source>
+      <Name>Music\The Kraken</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\The Kraken.xnb</Output>
+      <Extra>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\The Kraken.wma</Extra>
+      <Time>2015-01-30T09:49:33.2844256-06:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\ValebatiaContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\ValebatiaContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T13:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T13:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-01-20T06:20:32.0136901-06:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

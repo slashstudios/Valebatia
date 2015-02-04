@@ -1,0 +1,64 @@
+F:\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Valebatia.exe
+F:\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Valebatia.pdb
+F:\Valebatia\Valebatia\Valebatia\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+F:\Valebatia\Valebatia\Valebatia\obj\x86\Debug\Valebatia.exe
+F:\Valebatia\Valebatia\Valebatia\obj\x86\Debug\Valebatia.pdb
+F:\Valebatia\Valebatia\Valebatia\obj\x86\Debug\Valebatia.csprojResolveAssemblyReference.cache
+F:\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\gameName.xnb
+F:\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Images\player.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\obj\x86\Debug\Valebatia.csprojResolveAssemblyReference.cache
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\obj\x86\Debug\Valebatia.exe
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\obj\x86\Debug\Valebatia.pdb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\gameName.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Images\player.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Valebatia.exe
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Valebatia.pdb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Images\background.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Images\tile.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Borealis.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Spark.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Borealis.wma
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Spark.wma
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Valebatia.exe.manifest
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Valebatia.application
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\obj\x86\Debug\Valebatia.exe.manifest
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\obj\x86\Debug\Valebatia.application
+\\CONNOR-LAPTOP\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\gameName.xnb
+\\CONNOR-LAPTOP\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Images\player.xnb
+\\CONNOR-LAPTOP\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Images\background.xnb
+\\CONNOR-LAPTOP\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Images\tile.xnb
+\\CONNOR-LAPTOP\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Borealis.xnb
+\\CONNOR-LAPTOP\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Spark.xnb
+\\CONNOR-LAPTOP\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Borealis.wma
+\\CONNOR-LAPTOP\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Spark.wma
+\\CONNOR-LAPTOP\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\obj\x86\Debug\Valebatia.csprojResolveAssemblyReference.cache
+\\CONNOR-LAPTOP\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+\\CONNOR-LAPTOP\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\obj\x86\Debug\Valebatia.exe
+\\CONNOR-LAPTOP\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\obj\x86\Debug\Valebatia.pdb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Music\general_gps.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Music\general_gps.wma
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\obj\x86\Debug\Valebatia.TrustInfo.xml
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\gameName.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\player.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\background.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\tile.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Borealis.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Spark.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\general_gps.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Borealis.wma
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Spark.wma
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\general_gps.wma
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Valebatia.exe.manifest
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Valebatia.application
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Valebatia.exe
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Valebatia.pdb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\obj\x86\Debug\Valebatia.csprojResolveAssemblyReference.cache
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\obj\x86\Debug\Valebatia.TrustInfo.xml
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\obj\x86\Debug\Valebatia.exe.manifest
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\obj\x86\Debug\Valebatia.application
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\obj\x86\Debug\Valebatia.exe
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\obj\x86\Debug\Valebatia.pdb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\The Kraken.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\The Kraken.wma
