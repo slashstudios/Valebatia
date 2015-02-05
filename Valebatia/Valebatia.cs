@@ -236,6 +236,7 @@ namespace Valebatia
                 //If it's farther than ground
                 {
                     jumping = false;
+                    player.position.Y = startY;
                 }
             }
             else
