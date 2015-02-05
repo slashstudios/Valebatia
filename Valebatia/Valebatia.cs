@@ -243,6 +243,7 @@ namespace Valebatia
                 if (state.IsKeyDown(Keys.Space))
                 {
                     jumping = true;
+                    startY = player.position.Y;
                     jumpspeed = -5; //Give the player upward thrust
                 }
             }
