@@ -1,5 +1,4 @@
-﻿#region Using Statements
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
@@ -14,11 +13,11 @@ using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
 using System.Diagnostics;
 using System.Threading;
-#endregion
+
 
 namespace Valebatia
 {
-    #region Enumerators
+    // Enumerators
     public enum devUID { 
         epicdragonfour, 
         shadeslayer, 
@@ -42,19 +41,18 @@ namespace Valebatia
         Android,
         Kraken
     }
-    #endregion
+    
 
     public class Valebatia : Microsoft.Xna.Framework.Game
     {
-        #region Player Functions
+        // Player Functions
         public struct player 
         {
             public static Vector2 position = Vector2.Zero;
             public static Texture2D texture;
         }
-        #endregion
+        
 
-        #region Achievements and Locked Achievements
         public class Achievements
         {
 
@@ -70,15 +68,14 @@ namespace Valebatia
                 // Kraken Achievement
                 public static int lachvTrenchWrath = 0;
                 public static string lachvTrenchWrathDesc;
-                // Andriod Achievement
+                // Android Achievement
                 public static int lachvWiresforBlood = 0;
                 public static string lachvWiresforBloodDesc;
                 
             }
         }
-        #endregion
+        
 
-        #region Race Names and Hidden Race Names
         public class raceNames 
         {
             // Ground Races
@@ -100,9 +97,7 @@ namespace Valebatia
             }
 
         }
-        #endregion
-
-        #region Types
+       
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         public SpriteFont font;
@@ -117,13 +112,14 @@ namespace Valebatia
         public float jumpspeed = 0;
         public bool Hardcore = false;
         public bool jumping = false;
+        public bool paused = false;
         public Texture2D Background;
         public Texture2D testTile;
         public Song gen_gps;
         public Song borealis;
         public Song spark;
         public Song kraken;
-        #endregion
+        
 
         public Valebatia()
         {
@@ -138,7 +134,6 @@ namespace Valebatia
             
         }
 
-        #region Content Loading
         protected override void LoadContent()
         {
             /// Content Load Initiative
@@ -159,30 +154,27 @@ namespace Valebatia
             kraken = Content.Load<Song>("Music/The Kraken");
             //MediaPlayer.Play(kraken);
         }
-        #endregion
+        
 
-        #region Content Unloading 
         protected override void UnloadContent()
         {
             // Unload Content Initiative
         }
-        #endregion 
+         
 
-        #region Update Method
         protected override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
             float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
             KeyboardState state = Keyboard.GetState();
 
-            #region Game Closing
+            // Closing Controls
             if (state.IsKeyDown(Keys.Escape))
             {
                 this.Exit();
             }
-            #endregion
-            
-            #region Movement Controls
+
+            // Movement Controls
 
             if (state.IsKeyDown(Keys.W))
             {
@@ -200,9 +192,9 @@ namespace Valebatia
             {
                 player.position.X += 2;
             }
-#endregion
 
-            #region Achievement Stuff
+
+            // Achievements
             if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == 1)
             {
                 Valebatia.Achievements.lockedAchievements.lachvLordofTimeDesc = "You have 13 tries. Don't ruin anyone's life.";
@@ -224,9 +216,9 @@ namespace Valebatia
             {
                 Valebatia.Achievements.lockedAchievements.lachvWiresforBloodDesc = "Something from the deep is coming. . .";
             }
-            #endregion
+            
 
-            #region Jump Physics
+            // Jump Physics
             if (jumping)
             {
                 
@@ -248,26 +240,36 @@ namespace Valebatia
                     jumpspeed = -5; //Give the player upward thrust
                 }
             }
-            #endregion
+            
+            if (state.IsKeyDown(Keys.P))
+            {
+                playerHealth = playerHealth - 1;
+            }
 
+            if (playerHealth < 0)
+            {
+                playerHealth = 0;
+            }
+
+            
             //Audio Controls
         }
-        #endregion
+        
             
-        #region Draw Method
+        // Draw Method
         protected override void Draw(GameTime gameTime)
         {
             float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
             spriteBatch.Begin();
             //spriteBatch.Draw(Background, new Rectangle(0, 0, 800, 480), Color.Blue);
             spriteBatch.DrawString(font, "FPS: " + frameRate, new Vector2(80,30), Color.Black);
+            spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
             spriteBatch.Draw(player.texture, player.position, Color.White);
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
             spriteBatch.End();
             base.Draw(gameTime);
         }
-        #endregion
+        
 
     }
 
