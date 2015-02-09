@@ -249,12 +249,12 @@ namespace Valebatia
                 playerHealth--;
             }
 
-            if (playerHealth < 0)
+            if (playerHealth <= 0)
             {
-                if ((timeLordLives) > 0) {
-                    playerHealth = 100;
-                    timeLordLives --;
-
+                timeLordLives --;
+                playerHealth = 100;
+                if ((timeLordLives) <= 0) {
+                    MessageBox.Show("FAILURE. You died"); //This probably won't compile, fix it! (I'm too lazy to download visual studio)
                 }
                 playerHealth = 0;
             }
@@ -274,7 +274,7 @@ namespace Valebatia
             spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
             spriteBatch.DrawString(font, "Timelord Lives: " + timeLordLives, new Vector2(80, 80), Color.Black);
             spriteBatch.Draw(player.texture, player.position, Color.White);
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.White);
             spriteBatch.End();
             base.Draw(gameTime);
         }
