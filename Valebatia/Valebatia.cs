@@ -198,6 +198,7 @@ namespace Valebatia
             if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == 1)
             {
                 Valebatia.Achievements.lockedAchievements.lachvLordofTimeDesc = "You have 13 tries. Don't ruin anyone's life.";
+                timeLordLives = 13;
             }
             if ((Valebatia.Achievements.lockedAchievements.lachvEcholocation) == 1)
             {
@@ -207,8 +208,10 @@ namespace Valebatia
             {
                 Valebatia.Achievements.lockedAchievements.lachvTrenchWrathDesc = "Something from the deep is coming. . .";
             }
+
             if (state.IsKeyDown(Keys.P))
             {
+
                 //Valebatia.Achievements.lockedAchievements.lachvTrenchWrath = 1;
             }
 
@@ -243,11 +246,16 @@ namespace Valebatia
             
             if (state.IsKeyDown(Keys.P))
             {
-                playerHealth = playerHealth - 1;
+                playerHealth--;
             }
 
             if (playerHealth < 0)
             {
+                if ((timeLordLives) != 0) {
+                    playerHealth = 100;
+                    timeLordLives --;
+
+                }
                 playerHealth = 0;
             }
 
@@ -264,6 +272,7 @@ namespace Valebatia
             //spriteBatch.Draw(Background, new Rectangle(0, 0, 800, 480), Color.Blue);
             spriteBatch.DrawString(font, "FPS: " + frameRate, new Vector2(80,30), Color.Black);
             spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
+            spriteBatch.DrawString(font, "Timelord Lives: " + timeLordLives, new Vector2(80, 80), Color.Black);
             spriteBatch.Draw(player.texture, player.position, Color.White);
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.End();
