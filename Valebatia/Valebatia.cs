@@ -248,14 +248,17 @@ namespace Valebatia
             {
                 playerHealth--;
             }
+            if ((playerHealth) == 0)
+            {
+                if ((timeLordLives) > 0)
+                {
+                        playerHealth = 100;
+                        timeLordLives--;
+                }
+            }
 
             if (playerHealth < 0)
             {
-                if ((timeLordLives) > 0) {
-                    playerHealth = 100;
-                    timeLordLives --;
-
-                }
                 playerHealth = 0;
             }
 
