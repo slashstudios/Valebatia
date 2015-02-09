@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
@@ -248,6 +249,7 @@ namespace Valebatia
             {
                 playerHealth--;
             }
+
             if ((playerHealth) == 0)
             {
                 if ((timeLordLives) > 0)
@@ -256,17 +258,8 @@ namespace Valebatia
                         timeLordLives--;
                 }
             }
-
-            if (playerHealth <= 0)
+            if ((playerHealth) <= 0)
             {
-<<<<<<< HEAD
-=======
-                timeLordLives --;
-                playerHealth = 100;
-                if ((timeLordLives) <= 0) {
-                    MessageBox.Show("FAILURE. You died"); //This probably won't compile, fix it! (I'm too lazy to download visual studio)
-                }
->>>>>>> origin/master
                 playerHealth = 0;
             }
 
