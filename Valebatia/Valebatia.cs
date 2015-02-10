@@ -249,8 +249,11 @@ namespace Valebatia
             {
                 if ((timeLordLives) > 0)
                 {
+                    if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true)
+                    {
                         playerHealth = 100;
                         timeLordLives--;
+                    }
                 }
             }
             if ((playerHealth) <= 0)
@@ -267,12 +270,16 @@ namespace Valebatia
         protected override void Draw(GameTime gameTime)
         {
             float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
+            KeyboardState state = Keyboard.GetState();
             spriteBatch.Begin();
-            //spriteBatch.Draw(Background, new Rectangle(0, 0, 800, 480), Color.Blue);
             spriteBatch.DrawString(font, "FPS: " + frameRate, new Vector2(80,30), Color.Black);
             spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
             spriteBatch.Draw(player.texture, player.position, Color.White);
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            if (state.IsKeyDown(Keys.I))
+            {
+                spriteBatch.Draw(Background, new Rectangle(0, 0, 800, 480), Color.Black);
+            }
             if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true)
             {
                 spriteBatch.DrawString(font, "Timelord Lives: " + timeLordLives, new Vector2(80, 80), Color.Black);
