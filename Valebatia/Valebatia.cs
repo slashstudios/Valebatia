@@ -105,6 +105,7 @@ namespace Valebatia
         public int playerMana = 100;
         public int playerStamina = 100;
         public int timeLordLives = 13;
+        public bool timelordLivesset = false;
         public int exp = 0;
         public string ConnorHeadCode = "cutwovalebatia";
         public float startY = 250/*player.position.Y*/;
@@ -194,9 +195,10 @@ namespace Valebatia
 
 
             // Achievements
-            if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true)
+            if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true && !timelordLivesset)
             {
                 Valebatia.Achievements.lockedAchievements.lachvLordofTimeDesc = "You have 13 tries. Don't ruin anyone's life.";
+                timelordLivesset = true;
                 timeLordLives = 13;
             }
             if ((Valebatia.Achievements.lockedAchievements.lachvEcholocation) == true)
@@ -213,7 +215,7 @@ namespace Valebatia
             }
             
 
-            // Jump Physics
+            #region Jump Physics
             if (jumping)
             {
                 
@@ -235,7 +237,8 @@ namespace Valebatia
                     jumpspeed = -5; //Give the player upward thrust
                 }
             }
-            
+#endregion
+
             if (state.IsKeyDown(Keys.P))
             {
                 playerHealth--;
@@ -245,21 +248,17 @@ namespace Valebatia
                 Valebatia.Achievements.lockedAchievements.lachvLordofTime = true;
             }
 
-            if ((playerHealth) == 0)
-            {
-                if ((timeLordLives) > 0)
-                {
-                    if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true)
-                    {
-                        playerHealth = 100;
-                        timeLordLives--;
-                    }
-                }
-            }
             if ((playerHealth) <= 0)
             {
                 playerHealth = 0;
             }
+
+            if ((playerHealth) == 0 && timeLordLives > 0 && Valebatia.Achievements.lockedAchievements.lachvLordofTime)
+            {
+                playerHealth = 100;
+                timeLordLives--;
+            }
+
 
             
             //Audio Controls
