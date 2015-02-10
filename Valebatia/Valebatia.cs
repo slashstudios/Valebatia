@@ -203,19 +203,12 @@ namespace Valebatia
             }
             if ((Valebatia.Achievements.lockedAchievements.lachvEcholocation) == 1)
             {
-                Valebatia.Achievements.lockedAchievements.lachvEcholocationDesc = "A rare mutation of sharkpeople which can breath on land and not in water. . . ";
+                Valebatia.Achievements.lockedAchievements.lachvEcholocationDesc = "A rare mutation of sharkpeople which can breathe on land and not in water. . . ";
             }
             if ((Valebatia.Achievements.lockedAchievements.lachvTrenchWrath) == 1)
             {
                 Valebatia.Achievements.lockedAchievements.lachvTrenchWrathDesc = "Something from the deep is coming. . .";
             }
-
-            if (state.IsKeyDown(Keys.P))
-            {
-
-                //Valebatia.Achievements.lockedAchievements.lachvTrenchWrath = 1;
-            }
-
             if ((Valebatia.Achievements.lockedAchievements.lachvWiresforBlood) == 1)
             {
                 Valebatia.Achievements.lockedAchievements.lachvWiresforBloodDesc = "Something from the deep is coming. . .";
@@ -278,7 +271,7 @@ namespace Valebatia
             spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
             spriteBatch.DrawString(font, "Timelord Lives: " + timeLordLives, new Vector2(80, 80), Color.Black);
             spriteBatch.Draw(player.texture, player.position, Color.White);
-            GraphicsDevice.Clear(Color.White);
+            GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.End();
             base.Draw(gameTime);
         }
