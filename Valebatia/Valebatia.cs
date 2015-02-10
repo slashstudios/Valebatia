@@ -70,8 +70,8 @@ namespace Valebatia
                 public static int lachvTrenchWrath = 0;
                 public static string lachvTrenchWrathDesc;
                 // Android Achievement
-                public static int lachvWiresforBlood = 0;
-                public static string lachvWiresforBloodDesc;
+                public static int lachvBloodforWires = 0;
+                public static string lachvBloodforWiresDesc;
                 
             }
         }
@@ -209,9 +209,9 @@ namespace Valebatia
             {
                 Valebatia.Achievements.lockedAchievements.lachvTrenchWrathDesc = "Something from the deep is coming. . .";
             }
-            if ((Valebatia.Achievements.lockedAchievements.lachvWiresforBlood) == 1)
+            if ((Valebatia.Achievements.lockedAchievements.lachvBloodforWires) == 1)
             {
-                Valebatia.Achievements.lockedAchievements.lachvWiresforBloodDesc = "Something from the deep is coming. . .";
+                Valebatia.Achievements.lockedAchievements.lachvBloodforWiresDesc = "Something from the deep is coming. . .";
             }
             
 
