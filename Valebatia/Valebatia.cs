@@ -49,7 +49,7 @@ namespace Valebatia
         // Player Functions
         public struct player 
         {
-            public static Vector2 position = Vector2.Zero;
+            public static Vector2 position;
             public static Texture2D texture;
         }
         
@@ -276,7 +276,7 @@ namespace Valebatia
 
             if (state.IsKeyDown(Keys.I))
             {
-                spriteBatch.Draw(Background, new Rectangle(0, 0, 800, 480), Color.Black);
+                spriteBatch.Draw(Background, new Rectangle(0, 0, 800, 480),Color.Black * 0.5f);
             }
 
             if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true)
