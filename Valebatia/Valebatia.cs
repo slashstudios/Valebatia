@@ -271,17 +271,16 @@ namespace Valebatia
             spriteBatch.Begin();
             spriteBatch.DrawString(font, "FPS: " + frameRate, new Vector2(80,30), Color.Black);
             spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
-            spriteBatch.Draw(player.texture, player.position, Color.White);
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            if (state.IsKeyDown(Keys.I))
-            {
-                spriteBatch.Draw(Background, new Rectangle(0, 0, 800, 480),Color.Black * 0.5f);
-            }
 
             if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true)
             {
                 spriteBatch.DrawString(font, "Timelord Lives: " + timeLordLives, new Vector2(80, 80), Color.Black);
+            }
+            spriteBatch.Draw(player.texture, player.position, Color.White);
+            if (state.IsKeyDown(Keys.I))
+            {
+                spriteBatch.Draw(Background, new Rectangle(0, 0, 800, 480), Color.Black * 0.5f);
             }
 
             spriteBatch.End();
