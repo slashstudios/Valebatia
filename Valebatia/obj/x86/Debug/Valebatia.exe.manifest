@@ -99,7 +99,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>BVfCSDSxpkYK4YlWy0pEtbcyy7k=</dsig:DigestValue>
+        <dsig:DigestValue>0d+RLAkRVblznuJX5f9ANUTkHcI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -220,13 +220,13 @@
       <dsig:DigestValue>diNvdcDpDtGEMuMQIHpkKK3qVHc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Readme.txt" size="112">
+  <file name="Readme.txt" size="113">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>JTpf2P+SBSlhTgtPToHJfh6jawU=</dsig:DigestValue>
+      <dsig:DigestValue>sIdfkWmPE4kD2ekwwcuoeyuFt2c=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

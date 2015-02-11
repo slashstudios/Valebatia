@@ -104,13 +104,13 @@ namespace Valebatia
         public int playerMana = 100;
         public int playerStamina = 100;
         public int timeLordLives = 13;
-        public bool timelordLivesset = false;
         public string ConnorHeadCode = "cutwovalebatia";
         public float startY = 250;
         public float jumpspeed = 0;
         public bool Hardcore = false;
         public bool jumping = false;
         public bool paused = false;
+        public bool timelordLivesset = false;
         public Texture2D Background;
         public Texture2D testTile;
         public Song gen_gps;
@@ -177,7 +177,6 @@ namespace Valebatia
             else if (!paused)
             {
 
-                Console.WriteLine("Update Testing");
                 // Closing Controls
                 if (state.IsKeyDown(Keys.PageUp))
                 {
@@ -275,20 +274,11 @@ namespace Valebatia
         // Draw Method
         protected override void Draw(GameTime gameTime)
         {
-            if (paused)
-            {
-                spriteBatch.Begin();
-                spriteBatch.Draw(Background, new Rectangle(0, 0, 800, 480), Color.Black * 0.5f);
-                spriteBatch.End();
-            }
-            else
-            {
                 float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
                 KeyboardState state = Keyboard.GetState();
                 spriteBatch.Begin();
                 spriteBatch.DrawString(font, "FPS: " + frameRate, new Vector2(80, 30), Color.Black);
                 spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
-                Console.WriteLine("Testing");
                 GraphicsDevice.Clear(Color.CornflowerBlue);
 
                 if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true)
@@ -299,9 +289,14 @@ namespace Valebatia
                 spriteBatch.Draw(player.texture, player.position, Color.White);
 
                 spriteBatch.End();
+                if (paused)
+            {
+                spriteBatch.Begin();
+                spriteBatch.Draw(Background, new Rectangle(0, 0, 800, 480), Color.Black * 0.5f);
+                spriteBatch.End();
+            }
                 base.Draw(gameTime);
 
-            }
         }
         
     }
