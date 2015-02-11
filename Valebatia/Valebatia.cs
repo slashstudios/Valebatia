@@ -168,126 +168,144 @@ namespace Valebatia
             float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
             KeyboardState state = Keyboard.GetState();
 
-            // Closing Controls
             if (state.IsKeyDown(Keys.Escape))
             {
-                this.Exit();
+                paused = true;
             }
+            else if (state.IsKeyUp(Keys.Escape))
+            {
+                paused = false;
+            }
+            else if (!paused)
+            {
 
-            // Movement Controls
-
-            if (state.IsKeyDown(Keys.W))
-            {
-                player.position.Y -= 2;
-            }
-            if (state.IsKeyDown(Keys.A))
-            {
-                player.position.X -= 2;
-            }
-            if (state.IsKeyDown(Keys.S))
-            {
-                player.position.Y += 2;
-            }
-            if (state.IsKeyDown(Keys.D))
-            {
-                player.position.X += 2;
-            }
-
-
-            // Achievements
-            if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true && !timelordLivesset)
-            {
-                Valebatia.Achievements.lockedAchievements.lachvLordofTimeDesc = "You have 13 tries. Don't ruin anyone's life.";
-                timelordLivesset = true;
-                timeLordLives = 13;
-            }
-            if ((Valebatia.Achievements.lockedAchievements.lachvEcholocation) == true)
-            {
-                Valebatia.Achievements.lockedAchievements.lachvEcholocationDesc = "A rare mutation of sharkpeople which can breathe on land and not in water. . . ";
-            }
-            if ((Valebatia.Achievements.lockedAchievements.lachvTrenchWrath) == true)
-            {
-                Valebatia.Achievements.lockedAchievements.lachvTrenchWrathDesc = "Something from the deep is coming. . .";
-            }
-            if ((Valebatia.Achievements.lockedAchievements.lachvBloodforWires) == true)
-            {
-                Valebatia.Achievements.lockedAchievements.lachvBloodforWiresDesc = "Something from the deep is coming. . .";
-            }
-            
-
-            #region Jump Physics
-            if (jumping)
-            {
-                
-                player.position.Y += jumpspeed; // Makes it go upwards
-                jumpspeed += 1;
-                if (player.position.Y >= startY)
-                //If it's farther than ground
+                Console.WriteLine("Update Testing");
+                // Closing Controls
+                if (state.IsKeyDown(Keys.PageUp))
                 {
-                    jumping = false;
-                    player.position.Y = startY;
+                    this.Exit();
+                }
+
+                // Movement Controls
+
+                if (state.IsKeyDown(Keys.W))
+                {
+                    player.position.Y -= 2;
+                }
+                if (state.IsKeyDown(Keys.A))
+                {
+                    player.position.X -= 2;
+                }
+                if (state.IsKeyDown(Keys.S))
+                {
+                    player.position.Y += 2;
+                }
+                if (state.IsKeyDown(Keys.D))
+                {
+                    player.position.X += 2;
+                }
+
+
+                // Achievements
+                if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true && !timelordLivesset)
+                {
+                    Valebatia.Achievements.lockedAchievements.lachvLordofTimeDesc = "You have 13 tries. Don't ruin anyone's life.";
+                    timelordLivesset = true;
+                    timeLordLives = 13;
+                }
+                if ((Valebatia.Achievements.lockedAchievements.lachvEcholocation) == true)
+                {
+                    Valebatia.Achievements.lockedAchievements.lachvEcholocationDesc = "A rare mutation of sharkpeople which can breathe on land and not in water. . . ";
+                }
+                if ((Valebatia.Achievements.lockedAchievements.lachvTrenchWrath) == true)
+                {
+                    Valebatia.Achievements.lockedAchievements.lachvTrenchWrathDesc = "Something from the deep is coming. . .";
+                }
+                if ((Valebatia.Achievements.lockedAchievements.lachvBloodforWires) == true)
+                {
+                    Valebatia.Achievements.lockedAchievements.lachvBloodforWiresDesc = "Something from the deep is coming. . .";
+                }
+
+
+                #region Jump Physics
+                if (jumping)
+                {
+
+                    player.position.Y += jumpspeed; // Makes it go upwards
+                    jumpspeed += 1;
+                    if (player.position.Y >= startY)
+                    //If it's farther than ground
+                    {
+                        jumping = false;
+                        player.position.Y = startY;
+                    }
+                }
+                else
+                {
+                    if (state.IsKeyDown(Keys.Space))
+                    {
+                        jumping = true;
+                        startY = player.position.Y;
+                        jumpspeed = -5; //Give the player upward thrust
+                    }
+                }
+                #endregion
+
+                if (state.IsKeyDown(Keys.P))
+                {
+                    playerHealth--;
+                }
+                if (state.IsKeyDown(Keys.O))
+                {
+                    Valebatia.Achievements.lockedAchievements.lachvLordofTime = true;
+                }
+
+                if ((playerHealth) <= 0)
+                {
+                    playerHealth = 0;
+                }
+
+                if ((playerHealth) == 0 && timeLordLives > 0 && Valebatia.Achievements.lockedAchievements.lachvLordofTime)
+                {
+                    playerHealth = 100;
+                    timeLordLives--;
                 }
             }
-            else
-            {
-                if (state.IsKeyDown(Keys.Space))
-                {
-                    jumping = true;
-                    startY = player.position.Y;
-                    jumpspeed = -5; //Give the player upward thrust
-                }
-            }
-#endregion
-
-            if (state.IsKeyDown(Keys.P))
-            {
-                playerHealth--;
-            }
-            if (state.IsKeyDown(Keys.O))
-            {
-                Valebatia.Achievements.lockedAchievements.lachvLordofTime = true;
-            }
-
-            if ((playerHealth) <= 0)
-            {
-                playerHealth = 0;
-            }
-
-            if ((playerHealth) == 0 && timeLordLives > 0 && Valebatia.Achievements.lockedAchievements.lachvLordofTime)
-            {
-                playerHealth = 100;
-                timeLordLives--;
-            }
-
-
         }
         
             
         // Draw Method
         protected override void Draw(GameTime gameTime)
         {
-            float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
-            KeyboardState state = Keyboard.GetState();
-            spriteBatch.Begin();
-            spriteBatch.DrawString(font, "FPS: " + frameRate, new Vector2(80,30), Color.Black);
-            spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true)
+            if (paused)
             {
-                spriteBatch.DrawString(font, "Timelord Lives: " + timeLordLives, new Vector2(80, 80), Color.Black);
-            }
-            spriteBatch.Draw(player.texture, player.position, Color.White);
-            if (state.IsKeyDown(Keys.I))
-            {
+                spriteBatch.Begin();
                 spriteBatch.Draw(Background, new Rectangle(0, 0, 800, 480), Color.Black * 0.5f);
+                spriteBatch.End();
             }
+            else
+            {
+                float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
+                KeyboardState state = Keyboard.GetState();
+                spriteBatch.Begin();
+                spriteBatch.DrawString(font, "FPS: " + frameRate, new Vector2(80, 30), Color.Black);
+                spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
+                Console.WriteLine("Testing");
+                GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            spriteBatch.End();
-            base.Draw(gameTime);
+                if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true)
+                {
+                    spriteBatch.DrawString(font, "Timelord Lives: " + timeLordLives, new Vector2(80, 80), Color.Black);
+                }
+
+                spriteBatch.Draw(player.texture, player.position, Color.White);
+
+                spriteBatch.End();
+                base.Draw(gameTime);
+
+            }
         }
         
-
     }
 
 }
