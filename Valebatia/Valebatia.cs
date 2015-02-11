@@ -242,7 +242,15 @@ namespace Valebatia
                     }
                 }
                 #endregion
-
+                // Player Functions
+                if ((player.position.Y) <= 0)
+                {
+                    player.position.Y = 0;
+                }
+                if ((player.position.X) <= 0)
+                {
+                    player.position.X = 0;
+                }
                 if (state.IsKeyDown(Keys.P))
                 {
                     playerHealth--;
