@@ -166,28 +166,8 @@ namespace Valebatia
             base.Update(gameTime);
             float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
             KeyboardState state = Keyboard.GetState();
+
             
-            if (state.IsKeyDown(Keys.Escape))
-            {
-                paused = true; 
-                while (state.IsKeyDown(Keys.Escape))
-                {
-                    
-                }
-            }
-
-            else if (state.IsKeyDown(Keys.Escape) && paused)
-            {
-                while (state.IsKeyDown(Keys.Escape))
-                {
-
-                }
-                released = false;
-                paused = false;
-            }
-            else if (!paused)
-            {
-
                 // Closing Controls
                 if (state.IsKeyDown(Keys.PageUp))
                 {
@@ -279,7 +259,6 @@ namespace Valebatia
                     timeLordLives--;
                 }
             }
-        }
         
             
         // Draw Method
