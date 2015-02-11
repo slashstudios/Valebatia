@@ -100,15 +100,13 @@ namespace Valebatia
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         public SpriteFont font;
-        public int level = 0;
         public int playerHealth = 100;
         public int playerMana = 100;
         public int playerStamina = 100;
         public int timeLordLives = 13;
         public bool timelordLivesset = false;
-        public int exp = 0;
         public string ConnorHeadCode = "cutwovalebatia";
-        public float startY = 250/*player.position.Y*/;
+        public float startY = 250;
         public float jumpspeed = 0;
         public bool Hardcore = false;
         public bool jumping = false;
@@ -172,7 +170,7 @@ namespace Valebatia
             {
                 paused = true;
             }
-            else if (state.IsKeyUp(Keys.Escape))
+            else if (state.IsKeyUp(Keys.Escape) && paused)
             {
                 paused = false;
             }
