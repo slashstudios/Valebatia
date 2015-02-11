@@ -110,6 +110,7 @@ namespace Valebatia
         public bool Hardcore = false;
         public bool jumping = false;
         public bool paused = false;
+        public bool released = false;
         public bool timelordLivesset = false;
         public Texture2D Background;
         public Texture2D testTile;
@@ -165,13 +166,23 @@ namespace Valebatia
             base.Update(gameTime);
             float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
             KeyboardState state = Keyboard.GetState();
-
+            
             if (state.IsKeyDown(Keys.Escape))
             {
-                paused = true;
+                paused = true; 
+                while (state.IsKeyDown(Keys.Escape))
+                {
+                    
+                }
             }
-            else if (state.IsKeyUp(Keys.Escape) && paused)
+
+            else if (state.IsKeyDown(Keys.Escape) && paused)
             {
+                while (state.IsKeyDown(Keys.Escape))
+                {
+
+                }
+                released = false;
                 paused = false;
             }
             else if (!paused)
@@ -293,6 +304,7 @@ namespace Valebatia
             {
                 spriteBatch.Begin();
                 spriteBatch.Draw(Background, new Rectangle(0, 0, 800, 480), Color.Black * 0.5f);
+
                 spriteBatch.End();
             }
                 base.Draw(gameTime);

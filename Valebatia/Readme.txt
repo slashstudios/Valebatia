@@ -1,5 +1,5 @@
 ﻿Connor
-Andrew XIII
+Andrew XIV
 Sal
 Aiesha
 Corbin the Unpaid Janitorial Intern
@@ -9,3 +9,8 @@ Kaitlyn
 Tim
 Will
 John
+
+Beta Testers / Debuggers
+
+Koji
+Matthew
