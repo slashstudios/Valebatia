@@ -1,4 +1,3 @@
-Content\gameName.xnb
 Content\Images\player.xnb
 Content\Images\background.xnb
 Content\Images\tile.xnb
@@ -10,3 +9,4 @@ Content\Music\general_gps.xnb
 Content\Music\general_gps.wma
 Content\Music\The Kraken.xnb
 Content\Music\The Kraken.wma
+Content\spriteFont.xnb

@@ -80,18 +80,18 @@ namespace Valebatia
         public class raceNames 
         {
             // Ground Races
-            public bool raceHuman = true;
-            public bool raceGorilla = true;
+            public static bool raceHuman = true;
+            public static bool raceGorilla = true;
             // Aquatic Races
-            public bool raceSharkman = true;
+            public static bool raceSharkman = true;
 
             public class hiddenRaceNames
             {
-                public bool raceTimelord = false;
-                public bool raceAndroid = false;
-                public bool raceKraken = false;
-                public bool raceDeveloper = false;
-                public bool raceDolphin = false;
+                public static bool raceTimelord = false;
+                public static bool raceAndroid = false;
+                public static bool raceKraken = false;
+                public static bool raceDeveloper = false;
+                public static bool raceDolphin = false;
                 
             }
 
@@ -139,7 +139,7 @@ namespace Valebatia
             
             spriteBatch = new SpriteBatch(this.GraphicsDevice);
             // Fonts and Text
-            font = Content.Load<SpriteFont>("gameName");
+            font = Content.Load<SpriteFont>("spriteFont");
 
             // Textures and Images
             player.texture = Content.Load<Texture2D>("Images/player");
@@ -198,20 +198,24 @@ namespace Valebatia
                 if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true && !timelordLivesset)
                 {
                     Valebatia.Achievements.lockedAchievements.lachvLordofTimeDesc = "You have 13 tries. Don't ruin anyone's life.";
+                    Valebatia.raceNames.hiddenRaceNames.raceTimelord = true;
                     timelordLivesset = true;
                     timeLordLives = 13;
                 }
                 if ((Valebatia.Achievements.lockedAchievements.lachvEcholocation) == true)
                 {
                     Valebatia.Achievements.lockedAchievements.lachvEcholocationDesc = "A rare mutation of sharkpeople which can breathe on land and not in water. . . ";
+                    Valebatia.raceNames.hiddenRaceNames.raceDolphin = true;
                 }
                 if ((Valebatia.Achievements.lockedAchievements.lachvTrenchWrath) == true)
                 {
                     Valebatia.Achievements.lockedAchievements.lachvTrenchWrathDesc = "Something from the deep is coming. . .";
+                    Valebatia.raceNames.hiddenRaceNames.raceKraken = true;
                 }
                 if ((Valebatia.Achievements.lockedAchievements.lachvBloodforWires) == true)
                 {
                     Valebatia.Achievements.lockedAchievements.lachvBloodforWiresDesc = "Something from the deep is coming. . .";
+                    Valebatia.raceNames.hiddenRaceNames.raceAndroid = true;
                 }
 
 
@@ -277,15 +281,7 @@ namespace Valebatia
                 }
 
                 spriteBatch.Draw(player.texture, player.position, Color.White);
-
                 spriteBatch.End();
-                if (paused)
-            {
-                spriteBatch.Begin();
-                spriteBatch.Draw(Background, new Rectangle(0, 0, 800, 480), Color.Black * 0.5f);
-
-                spriteBatch.End();
-            }
                 base.Draw(gameTime);
 
         }

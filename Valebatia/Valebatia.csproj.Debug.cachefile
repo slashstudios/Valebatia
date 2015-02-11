@@ -1,4 +1,3 @@
-Content\gameName.xnb
 Content\Images\player.xnb
 Content\Images\background.xnb
 Content\Images\tile.xnb
@@ -6,6 +5,7 @@ Content\Music\Borealis.xnb
 Content\Music\Spark.xnb
 Content\Music\general_gps.xnb
 Content\Music\The Kraken.xnb
+Content\spriteFont.xnb
 Content\Music\Borealis.wma
 Content\Music\Spark.wma
 Content\Music\general_gps.wma

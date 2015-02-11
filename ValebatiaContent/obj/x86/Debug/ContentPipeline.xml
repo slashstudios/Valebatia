@@ -2,15 +2,6 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>gameName.spritefont</Source>
-      <Name>gameName</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\gameName.xnb</Output>
-      <Time>2014-11-22T21:36:08-06:00</Time>
-    </Item>
-    <Item>
       <Source>Images\player.png</Source>
       <Name>Images\player</Name>
       <Importer>TextureImporter</Importer>
@@ -76,6 +67,15 @@
       <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\The Kraken.xnb</Output>
       <Extra>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\The Kraken.wma</Extra>
       <Time>2015-01-30T09:49:33.2844256-06:00</Time>
+    </Item>
+    <Item>
+      <Source>spriteFont.spritefont</Source>
+      <Name>spriteFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\spriteFont.xnb</Output>
+      <Time>2014-11-22T21:36:08-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
