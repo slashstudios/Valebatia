@@ -192,7 +192,7 @@ namespace Valebatia
                 }
 
 
-                // Achievements
+                #region Achievements
                 if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true && !timelordLivesset)
                 {
                     Valebatia.Achievements.lockedAchievements.lachvLordofTimeDesc = "You have 13 tries. Don't ruin anyone's life.";
@@ -215,7 +215,7 @@ namespace Valebatia
                     Valebatia.Achievements.lockedAchievements.lachvBloodforWiresDesc = "Something from the deep is coming. . .";
                     Valebatia.raceNames.hiddenRaceNames.raceAndroid = true;
                 }
-
+                #endregion
 
                 #region Jump Physics
                 if (jumping)
@@ -240,6 +240,7 @@ namespace Valebatia
                     }
                 }
                 #endregion
+
                 // Player Functions
                 if ((player.position.Y) <= 0)
                 {
