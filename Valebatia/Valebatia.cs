@@ -112,7 +112,7 @@ namespace Valebatia
         public bool paused = false;
         public bool released = false;
         public bool timelordLivesset = false;
-        public Texture2D Background;
+        public Texture2D background;
         public Texture2D testTile;
         public Song gen_gps;
         public Song borealis;
@@ -143,7 +143,7 @@ namespace Valebatia
 
             // Textures and Images
             player.texture = Content.Load<Texture2D>("Images/player");
-            Background = Content.Load<Texture2D>("Images/background");
+            background = Content.Load<Texture2D>("Images/background");
             testTile = Content.Load<Texture2D>("Images/tile");
 
             // Audio and Sound
@@ -166,13 +166,11 @@ namespace Valebatia
             base.Update(gameTime);
             float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
             KeyboardState state = Keyboard.GetState();
+            MouseState mouseState = Mouse.GetState();
 
             
                 // Closing Controls
-                if (state.IsKeyDown(Keys.PageUp))
-                {
-                    this.Exit();
-                }
+
 
                 // Movement Controls
 
@@ -270,7 +268,8 @@ namespace Valebatia
                     playerHealth = 100;
                     timeLordLives--;
                 }
-            }
+
+           }
         
             
         // Draw Method
@@ -279,20 +278,27 @@ namespace Valebatia
                 float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
                 KeyboardState state = Keyboard.GetState();
                 spriteBatch.Begin();
-                spriteBatch.DrawString(font, "FPS: " + frameRate, new Vector2(80, 30), Color.Black);
-                spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
-                GraphicsDevice.Clear(Color.CornflowerBlue);
-
-                if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true)
+                if (paused == true)
                 {
-                    spriteBatch.DrawString(font, "Timelord Lives: " + timeLordLives, new Vector2(80, 80), Color.Black);
+                    spriteBatch.Draw(background, new Rectangle(0, 0, 800, 480), Color.Black * 0.5f);
                 }
+                else
+                {
+                    spriteBatch.DrawString(font, "FPS: " + frameRate, new Vector2(80, 30), Color.Black);
+                    spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
+                    spriteBatch.Draw(player.texture, player.position, Color.White);
+                    GraphicsDevice.Clear(Color.CornflowerBlue);
 
-                spriteBatch.Draw(player.texture, player.position, Color.White);
-                spriteBatch.End();
-                base.Draw(gameTime);
+                    if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true)
+                    {
+                        spriteBatch.DrawString(font, "Timelord Lives: " + timeLordLives, new Vector2(80, 80), Color.Black);
+                    }
 
+                    base.Draw(gameTime);
+                }
+             spriteBatch.End();
         }
+                    
         
     }
 
