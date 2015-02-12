@@ -170,7 +170,10 @@ namespace Valebatia
 
             
                 // Closing Controls
-
+            if (state.IsKeyDown(Keys.Escape))
+            {
+                this.Exit();
+            }
 
                 // Movement Controls
 
