@@ -105,9 +105,10 @@ namespace Valebatia
         public int playerStamina = 100;
         public int timeLordLives = 13;
         public string ConnorHeadCode = "cutwovalebatia";
+        public string savegame = "savegame.vbsg";
         public float startY = 250;
         public float jumpspeed = 0;
-        public bool Hardcore = false;
+        public bool hardcore = false;
         public bool jumping = false;
         public bool paused = false;
         public bool released = false;
