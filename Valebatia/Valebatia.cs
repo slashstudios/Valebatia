@@ -19,22 +19,24 @@ using System.Threading;
 namespace Valebatia
 {
     // Enumerators
-    public enum devUID { 
-        epicdragonfour, 
-        shadeslayer, 
-        two_cat0, 
-        cupid_titanium, 
-        kk_sherlokiwitz, 
-        dinostep, 
-        tryad, 
-        scorpion3k, 
-        warhawk92, 
-        starhunter117, 
+    public enum devUID
+    {
+        epicdragonfour,
+        shadeslayer,
+        two_cat0,
+        cupid_titanium,
+        kk_sherlokiwitz,
+        dinostep,
+        tryad,
+        scorpion3k,
+        warhawk92,
+        starhunter117,
         kamikaze909,
     }
-    public enum bodyTypes {
-        Lanky, 
-        Average, 
+    public enum bodyTypes
+    {
+        Lanky,
+        Average,
         Muscular,
         Shark,
         Timelord,
@@ -42,17 +44,17 @@ namespace Valebatia
         Android,
         Kraken
     }
-    
+
 
     public class Valebatia : Microsoft.Xna.Framework.Game
     {
         // Player Functions
-        public struct player 
+        public struct player
         {
             public static Vector2 position;
             public static Texture2D texture;
         }
-        
+
 
         public class Achievements
         {
@@ -72,12 +74,12 @@ namespace Valebatia
                 // Android Achievement
                 public static bool lachvBloodforWires = false;
                 public static string lachvBloodforWiresDesc;
-                
+
             }
         }
-        
 
-        public class raceNames 
+
+        public class raceNames
         {
             // Ground Races
             public static bool raceHuman = true;
@@ -92,11 +94,11 @@ namespace Valebatia
                 public static bool raceKraken = false;
                 public static bool raceDeveloper = false;
                 public static bool raceDolphin = false;
-                
+
             }
 
         }
-       
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         public SpriteFont font;
@@ -105,6 +107,7 @@ namespace Valebatia
         public int playerStamina = 100;
         public int timeLordLives = 13;
         public string ConnorHeadCode = "cutwovalebatia";
+        public string ircChannel = "#valebatia";
         public string savegame = "savegame.vbsg";
         public float startY = 250;
         public float jumpspeed = 0;
@@ -119,7 +122,7 @@ namespace Valebatia
         public Song borealis;
         public Song spark;
         public Song kraken;
-        
+
 
         public Valebatia()
         {
@@ -131,13 +134,13 @@ namespace Valebatia
         protected override void Initialize()
         {
             base.Initialize();
-            
+
         }
 
         protected override void LoadContent()
         {
             /// Content Load Initiative
-            
+
             spriteBatch = new SpriteBatch(this.GraphicsDevice);
             // Fonts and Text
             font = Content.Load<SpriteFont>("spriteFont");
@@ -154,13 +157,13 @@ namespace Valebatia
             kraken = Content.Load<Song>("Music/The Kraken");
             //MediaPlayer.Play(kraken);
         }
-        
+
 
         protected override void UnloadContent()
         {
             // Unload Content Initiative
         }
-         
+
 
         protected override void Update(GameTime gameTime)
         {
@@ -168,10 +171,19 @@ namespace Valebatia
             float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
             KeyboardState state = Keyboard.GetState();
             MouseState mouseState = Mouse.GetState();
+            /*
+            if (state.IsKeyDown(Keys.Escape) && paused == true)
+            {
+                paused = false;
+            }
 
-            
+            if (state.IsKeyDown(Keys.Escape) && paused == false)
+            {
+                paused = true;
+            }
+            */
                 // Closing Controls
-                if (state.IsKeyDown(Keys.Escape))
+                if (state.IsKeyDown(Keys.PageUp))
                 {
                     this.Exit();
                 }
@@ -273,38 +285,37 @@ namespace Valebatia
                     playerHealth = 100;
                     timeLordLives--;
                 }
+        }
 
-           }
-        
-            
+
         // Draw Method
         protected override void Draw(GameTime gameTime)
         {
-                float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
-                KeyboardState state = Keyboard.GetState();
-                spriteBatch.Begin();
-                if (paused == true)
-                {
-                    spriteBatch.Draw(background, new Rectangle(0, 0, 800, 480), Color.Black * 0.5f);
-                }
-                else
-                {
-                    spriteBatch.DrawString(font, "FPS: " + frameRate, new Vector2(80, 30), Color.Black);
-                    spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
-                    spriteBatch.Draw(player.texture, player.position, Color.White);
-                    GraphicsDevice.Clear(Color.CornflowerBlue);
+            float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
+            KeyboardState state = Keyboard.GetState();
+            spriteBatch.Begin();
+            spriteBatch.DrawString(font, "FPS: " + frameRate, new Vector2(80, 30), Color.Black);
+            spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
+            GraphicsDevice.Clear(Color.CornflowerBlue);
 
-                    if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true)
-                    {
-                        spriteBatch.DrawString(font, "Timelord Lives: " + timeLordLives, new Vector2(80, 80), Color.Black);
-                    }
-
-                    base.Draw(gameTime);
-                }
-             spriteBatch.End();
+            if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true)
+            {
+                spriteBatch.DrawString(font, "Timelord Lives: " + timeLordLives, new Vector2(80, 80), Color.Black);
+            }
+            if (state.IsKeyDown(Keys.U))
+            {
+                spriteBatch.DrawString(font, ircChannel, new Vector2(80, 105), Color.Black);
+            }
+            spriteBatch.Draw(player.texture, player.position, Color.White);
+            /*if (paused == true)
+            {
+                spriteBatch.Draw(background, new Rectangle(0, 0, 800, 480), Color.Black * 0.5f);
+            }
+             */
+            base.Draw(gameTime);
+            spriteBatch.End();
         }
-                    
-        
-    }
 
+
+    }
 }
