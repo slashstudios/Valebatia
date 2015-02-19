@@ -62,14 +62,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Valebatia.exe" size="9728">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Valebatia.exe" size="10240">
       <assemblyIdentity name="Valebatia" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>z+85NnYbAc7H9dLVTaRmNf9cjeE=</dsig:DigestValue>
+        <dsig:DigestValue>GAZ4DL13VKTL7JbkUC0/W/pZYM8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -190,13 +190,13 @@
       <dsig:DigestValue>diNvdcDpDtGEMuMQIHpkKK3qVHc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Readme.txt" size="165">
+  <file name="Readme.txt" size="163">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>rsmieS1HYm377k6I7bVpGcNz9AU=</dsig:DigestValue>
+      <dsig:DigestValue>mb2aJVFrtc+vWwfiIiNddC6BInc=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

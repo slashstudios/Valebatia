@@ -9,9 +9,11 @@ Kaitlyn
 Tim
 Will
 John
+Matthew
 
 Beta Testers / Debuggers
 
 Koji
 Matthew
+Corbin
 Jack

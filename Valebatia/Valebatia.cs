@@ -56,27 +56,7 @@ namespace Valebatia
         }
 
 
-        public class Achievements
-        {
 
-
-            public class lockedAchievements
-            {
-                // Dolphin Achievement
-                public static bool lachvEcholocation = false;
-                public static string lachvEcholocationDesc;
-                // Timelord Achievement
-                public static bool lachvLordofTime = false;
-                public static string lachvLordofTimeDesc;
-                // Kraken Achievement
-                public static bool lachvTrenchWrath = false;
-                public static string lachvTrenchWrathDesc;
-                // Android Achievement
-                public static bool lachvBloodforWires = false;
-                public static string lachvBloodforWiresDesc;
-
-            }
-        }
 
 
         public class raceNames
@@ -164,24 +144,13 @@ namespace Valebatia
             // Unload Content Initiative
         }
 
-
+        
         protected override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
             float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
             KeyboardState state = Keyboard.GetState();
             MouseState mouseState = Mouse.GetState();
-            /*
-            if (state.IsKeyDown(Keys.Escape) && paused == true)
-            {
-                paused = false;
-            }
-
-            if (state.IsKeyDown(Keys.Escape) && paused == false)
-            {
-                paused = true;
-            }
-            */
                 // Closing Controls
                 if (state.IsKeyDown(Keys.PageUp))
                 {
@@ -189,46 +158,41 @@ namespace Valebatia
                 }
 
                 // Movement Controls
-
                 if (state.IsKeyDown(Keys.W))
                 {
-                    player.position.Y -= 2;
+                    Valebatia.player.position.Y -= 2;
                 }
                 if (state.IsKeyDown(Keys.A))
                 {
-                    player.position.X -= 2;
+                    Valebatia.player.position.X -= 2;
                 }
                 if (state.IsKeyDown(Keys.S))
                 {
-                    player.position.Y += 2;
+                    Valebatia.player.position.Y += 2;
                 }
                 if (state.IsKeyDown(Keys.D))
                 {
-                    player.position.X += 2;
+                    Valebatia.player.position.X += 2;
                 }
 
 
                 #region Achievements
-                if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true && !timelordLivesset)
+                if ((Achievements.lockedAchievements.lachvLordofTime) == true && !timelordLivesset)
                 {
-                    Valebatia.Achievements.lockedAchievements.lachvLordofTimeDesc = "You have 13 tries. Don't ruin anyone's life.";
                     Valebatia.raceNames.hiddenRaceNames.raceTimelord = true;
                     timelordLivesset = true;
                     timeLordLives = 13;
                 }
-                if ((Valebatia.Achievements.lockedAchievements.lachvEcholocation) == true)
+                if ((Achievements.lockedAchievements.lachvEcholocation) == true)
                 {
-                    Valebatia.Achievements.lockedAchievements.lachvEcholocationDesc = "A rare mutation of sharkpeople which can breathe on land and not in water. . . ";
                     Valebatia.raceNames.hiddenRaceNames.raceDolphin = true;
                 }
-                if ((Valebatia.Achievements.lockedAchievements.lachvTrenchWrath) == true)
+                if ((Achievements.lockedAchievements.lachvTrenchWrath) == true)
                 {
-                    Valebatia.Achievements.lockedAchievements.lachvTrenchWrathDesc = "Something from the deep is coming. . .";
                     Valebatia.raceNames.hiddenRaceNames.raceKraken = true;
                 }
-                if ((Valebatia.Achievements.lockedAchievements.lachvBloodforWires) == true)
+                if ((Achievements.lockedAchievements.lachvBloodforWires) == true)
                 {
-                    Valebatia.Achievements.lockedAchievements.lachvBloodforWiresDesc = "Something from the deep is coming. . .";
                     Valebatia.raceNames.hiddenRaceNames.raceAndroid = true;
                 }
                 #endregion
@@ -272,7 +236,7 @@ namespace Valebatia
                 }
                 if (state.IsKeyDown(Keys.O))
                 {
-                    Valebatia.Achievements.lockedAchievements.lachvLordofTime = true;
+                    Achievements.lockedAchievements.lachvLordofTime = true;
                 }
 
                 if ((playerHealth) <= 0)
@@ -280,7 +244,7 @@ namespace Valebatia
                     playerHealth = 0;
                 }
 
-                if ((playerHealth) == 0 && timeLordLives > 0 && Valebatia.Achievements.lockedAchievements.lachvLordofTime)
+                if ((playerHealth) == 0 && timeLordLives > 0 && Achievements.lockedAchievements.lachvLordofTime)
                 {
                     playerHealth = 100;
                     timeLordLives--;
@@ -298,7 +262,7 @@ namespace Valebatia
             spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            if ((Valebatia.Achievements.lockedAchievements.lachvLordofTime) == true)
+            if ((Achievements.lockedAchievements.lachvLordofTime) == true)
             {
                 spriteBatch.DrawString(font, "Timelord Lives: " + timeLordLives, new Vector2(80, 80), Color.Black);
             }
