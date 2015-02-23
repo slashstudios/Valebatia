@@ -274,6 +274,10 @@ namespace Valebatia
                 spriteBatch.Draw(tortoise, tortoisePosition, Color.White);
                 spriteBatch.DrawString(font, "Tortoise Health: " + tortoiseHealth, new Vector2(80, 130), Color.Black);
             }
+            if (tortoiseHealth == 0)
+            {
+                spriteBatch.DrawString(font, "You killed the tortoise!", new Vector2(80, 130), Color.Red);
+            }
             spriteBatch.Draw(player.texture, player.position, Color.White);
             /*if (paused == true)
             {
