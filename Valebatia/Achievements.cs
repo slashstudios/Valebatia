@@ -22,7 +22,14 @@ namespace Valebatia
     public class Achievements : Microsoft.Xna.Framework.GameComponent
     {
         // Achievements Go Here
+        public static bool AllAchievementsUnlocked = false;
 
+        public static class BossAchievements
+        {
+            public static bool TortoiseTipper = false;
+
+
+        }
             public class lockedAchievements
             {
                 // Dolphin Achievement

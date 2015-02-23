@@ -87,21 +87,23 @@ namespace Valebatia
         public int playerStamina = 100;
         public int timeLordLives = 13;
         public string ConnorHeadCode = "cutwovalebatia";
-        public string ircChannel = "#valebatia";
         public string savegame = "savegame.vbsg";
         public float startY = 250;
         public float jumpspeed = 0;
-        public bool hardcore = false;
+        public float tortoiseSpeed = 1f;
         public bool jumping = false;
         public bool paused = false;
         public bool released = false;
         public bool timelordLivesset = false;
         public Texture2D background;
-        public Texture2D testTile;
+        public Texture2D tortoise;
         public Song gen_gps;
         public Song borealis;
         public Song spark;
         public Song kraken;
+        public int tortoiseHealth = 100;
+        public int tortoiseDefense = 15;
+        public Vector2 tortoisePosition;
 
 
         public Valebatia()
@@ -128,14 +130,16 @@ namespace Valebatia
             // Textures and Images
             player.texture = Content.Load<Texture2D>("Images/player");
             background = Content.Load<Texture2D>("Images/background");
-            testTile = Content.Load<Texture2D>("Images/tile");
+            tortoise = Content.Load<Texture2D>("Images/tortoise");
 
             // Audio and Sound
             gen_gps = Content.Load<Song>("Music/general_gps");
             borealis = Content.Load<Song>("Music/Borealis");
             spark = Content.Load<Song>("Music/Spark");
             kraken = Content.Load<Song>("Music/The Kraken");
-            //MediaPlayer.Play(kraken);
+
+            // Type Definitions
+            tortoisePosition = new Vector2(200,200);
         }
 
 
@@ -151,6 +155,7 @@ namespace Valebatia
             float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
             KeyboardState state = Keyboard.GetState();
             MouseState mouseState = Mouse.GetState();
+
                 // Closing Controls
                 if (state.IsKeyDown(Keys.PageUp))
                 {
@@ -174,28 +179,6 @@ namespace Valebatia
                 {
                     Valebatia.player.position.X += 2;
                 }
-
-
-                #region Achievements
-                if ((Achievements.lockedAchievements.lachvLordofTime) == true && !timelordLivesset)
-                {
-                    Valebatia.raceNames.hiddenRaceNames.raceTimelord = true;
-                    timelordLivesset = true;
-                    timeLordLives = 13;
-                }
-                if ((Achievements.lockedAchievements.lachvEcholocation) == true)
-                {
-                    Valebatia.raceNames.hiddenRaceNames.raceDolphin = true;
-                }
-                if ((Achievements.lockedAchievements.lachvTrenchWrath) == true)
-                {
-                    Valebatia.raceNames.hiddenRaceNames.raceKraken = true;
-                }
-                if ((Achievements.lockedAchievements.lachvBloodforWires) == true)
-                {
-                    Valebatia.raceNames.hiddenRaceNames.raceAndroid = true;
-                }
-                #endregion
 
                 #region Jump Physics
                 if (jumping)
@@ -230,15 +213,27 @@ namespace Valebatia
                 {
                     player.position.X = 0;
                 }
+                if ((player.position.X) == 480)
+                {
+                    player.position.X = 480;
+                }
                 if (state.IsKeyDown(Keys.P))
                 {
                     playerHealth--;
                 }
+
+                // Moves the Tortoise
+                tortoisePosition.X = tortoisePosition.X += 1.75f;
+                if ((tortoisePosition.X) >= 800)
+                {
+                    tortoisePosition.X = 0;
+                }
+                
+                // Developer Testing Stuff
                 if (state.IsKeyDown(Keys.O))
                 {
                     Achievements.lockedAchievements.lachvLordofTime = true;
                 }
-
                 if ((playerHealth) <= 0)
                 {
                     playerHealth = 0;
@@ -249,6 +244,14 @@ namespace Valebatia
                     playerHealth = 100;
                     timeLordLives--;
                 }
+                if (state.IsKeyDown(Keys.U))
+                {
+                    tortoiseHealth =  tortoiseHealth - WeaponStats.currentWeaponDamage;
+                }
+                if ((tortoiseHealth) <= 0)
+                {
+                    tortoiseHealth = 0;
+                }
         }
 
 
@@ -258,17 +261,18 @@ namespace Valebatia
             float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
             KeyboardState state = Keyboard.GetState();
             spriteBatch.Begin();
+            GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.DrawString(font, "FPS: " + frameRate, new Vector2(80, 30), Color.Black);
             spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
-            GraphicsDevice.Clear(Color.CornflowerBlue);
 
             if ((Achievements.lockedAchievements.lachvLordofTime) == true)
             {
                 spriteBatch.DrawString(font, "Timelord Lives: " + timeLordLives, new Vector2(80, 80), Color.Black);
             }
-            if (state.IsKeyDown(Keys.U))
+            if ((tortoiseHealth) > 0)
             {
-                spriteBatch.DrawString(font, ircChannel, new Vector2(80, 105), Color.Black);
+                spriteBatch.Draw(tortoise, tortoisePosition, Color.White);
+                spriteBatch.DrawString(font, "Tortoise Health: " + tortoiseHealth, new Vector2(80, 130), Color.Black);
             }
             spriteBatch.Draw(player.texture, player.position, Color.White);
             /*if (paused == true)

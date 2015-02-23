@@ -62,14 +62,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Valebatia.exe" size="10240">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Valebatia.exe" size="11264">
       <assemblyIdentity name="Valebatia" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>GAZ4DL13VKTL7JbkUC0/W/pZYM8=</dsig:DigestValue>
+        <dsig:DigestValue>xhX2XeIs2bjKBSa/p3r2wMLWxhI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -91,13 +91,13 @@
       <dsig:DigestValue>jNp1GjckPxhIQUDm851T0QeSLlw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\Images\tile.xnb" size="1048763">
+  <file name="Content\Images\tortoise.xnb" size="4283">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>WVg083IjgJKvCsI3xam4+B5I72Q=</dsig:DigestValue>
+      <dsig:DigestValue>2rGFofmTJzqgVMMiRNRxlavoCTE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Music\Borealis.wma" size="7646571">
@@ -190,13 +190,13 @@
       <dsig:DigestValue>diNvdcDpDtGEMuMQIHpkKK3qVHc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Readme.txt" size="163">
+  <file name="Readme.txt" size="183">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>mb2aJVFrtc+vWwfiIiNddC6BInc=</dsig:DigestValue>
+      <dsig:DigestValue>/5fAz+iHLBBFV/kUYzc0c/05cfE=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

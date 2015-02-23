@@ -64,13 +64,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Images\tile.png">
-      <Name>tile</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Music\The Kraken.mp3">
       <Name>The Kraken</Name>
       <Importer>Mp3Importer</Importer>
@@ -98,6 +91,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Screens\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Images\tortoise.png">
+      <Name>tortoise</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -41,7 +41,6 @@ C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debu
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\obj\x86\Debug\Valebatia.TrustInfo.xml
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\player.xnb
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\background.xnb
-C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\tile.xnb
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Borealis.xnb
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Spark.xnb
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\general_gps.xnb
@@ -62,3 +61,4 @@ C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\obj\x86\Debug\Valebati
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\The Kraken.xnb
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\The Kraken.wma
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\spriteFont.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\tortoise.xnb

@@ -20,15 +20,6 @@
       <Time>2015-01-07T12:30:37.0427256-06:00</Time>
     </Item>
     <Item>
-      <Source>Images\tile.png</Source>
-      <Name>Images\tile</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\tile.xnb</Output>
-      <Time>2015-01-07T20:56:30.2767341-06:00</Time>
-    </Item>
-    <Item>
       <Source>Music\Borealis.mp3</Source>
       <Name>Music\Borealis</Name>
       <Importer>Mp3Importer</Importer>
@@ -76,6 +67,15 @@
       <Options>None</Options>
       <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\spriteFont.xnb</Output>
       <Time>2014-11-22T21:36:08-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\tortoise.png</Source>
+      <Name>Images\tortoise</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\tortoise.xnb</Output>
+      <Time>2015-02-19T06:48:00.3468302-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

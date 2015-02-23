@@ -23,12 +23,12 @@ namespace Valebatia
         // Put Types here
         public static class BossStats
         {
-            public static int KrakenLordHealth;
-            public static int KrakenLordDefense;
-            public static int GiantHawkBeakedGalapagosTortoiseHealth;
-            public static int GiantHawkBeakedGalapagosTortoiseDefense;
+            public static int KrakenLordHealth = 2500;
+            public static int KrakenLordDefense = 42;
+            public static int GiantHawkBeakedGalapagosTortoiseHealth = 3200;
+            public static int GiantHawkBeakedGalapagosTortoiseDefense = 50;
         }
-        public static class BossDeathAchievements
+        public static class BossDeathChecklist
         {
             public static bool IsKrakenLordDefeated = false;
             public static bool IsGiantHawkBeakedGalapagosTortoiseDefeated = false;
@@ -56,12 +56,12 @@ namespace Valebatia
 
             if ((Bosses.BossStats.KrakenLordHealth) <= 0)
             {
-                Bosses.BossDeathAchievements.IsKrakenLordDefeated = true;
+                Bosses.BossDeathChecklist.IsKrakenLordDefeated = true;
                 Bosses.BossStats.KrakenLordHealth = 0;
             }
             if ((Bosses.BossStats.GiantHawkBeakedGalapagosTortoiseHealth) <= 0)
             {
-                Bosses.BossDeathAchievements.IsGiantHawkBeakedGalapagosTortoiseDefeated = true;
+                Bosses.BossDeathChecklist.IsGiantHawkBeakedGalapagosTortoiseDefeated = true;
                 Bosses.BossStats.GiantHawkBeakedGalapagosTortoiseHealth = 0;
             }
 
