@@ -22,7 +22,8 @@ namespace Valebatia
     {
         // Types go here
         public static int defTestSwordDamage = 1;
-        public static int currentWeaponDamage = defTestSwordDamage;
+        public static int copperSwordDamage = 5;
+        public static int currentWeaponDamage = copperSwordDamage;
         public static int enemyDefense = Creatures.tortoiseDefense;
         public static int damagePerAttack = currentWeaponDamage - enemyDefense;
 

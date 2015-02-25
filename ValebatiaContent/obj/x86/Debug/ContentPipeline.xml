@@ -2,6 +2,15 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
+      <Source>spriteFont.spritefont</Source>
+      <Name>spriteFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\spriteFont.xnb</Output>
+      <Time>2014-11-22T21:36:08-06:00</Time>
+    </Item>
+    <Item>
       <Source>Images\player.png</Source>
       <Name>Images\player</Name>
       <Importer>TextureImporter</Importer>
@@ -18,6 +27,34 @@
       <Options>None</Options>
       <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\background.xnb</Output>
       <Time>2015-01-07T12:30:37.0427256-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\tortoise.png</Source>
+      <Name>Images\tortoise</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\tortoise.xnb</Output>
+      <Time>2015-02-19T06:48:00.3468302-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\itemtoolbar.png</Source>
+      <Name>Images\itemtoolbar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\itemtoolbar.xnb</Output>
+      <Time>2015-02-23T12:53:48.648773-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\The Kraken.mp3</Source>
+      <Name>Music\The Kraken</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\The Kraken.xnb</Output>
+      <Extra>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\The Kraken.wma</Extra>
+      <Time>2015-01-30T09:49:33.2844256-06:00</Time>
     </Item>
     <Item>
       <Source>Music\Borealis.mp3</Source>
@@ -48,34 +85,6 @@
       <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\general_gps.xnb</Output>
       <Extra>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\general_gps.wma</Extra>
       <Time>2015-01-30T09:52:53.7438738-06:00</Time>
-    </Item>
-    <Item>
-      <Source>Music\The Kraken.mp3</Source>
-      <Name>Music\The Kraken</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\The Kraken.xnb</Output>
-      <Extra>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\The Kraken.wma</Extra>
-      <Time>2015-01-30T09:49:33.2844256-06:00</Time>
-    </Item>
-    <Item>
-      <Source>spriteFont.spritefont</Source>
-      <Name>spriteFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\spriteFont.xnb</Output>
-      <Time>2014-11-22T21:36:08-06:00</Time>
-    </Item>
-    <Item>
-      <Source>Images\tortoise.png</Source>
-      <Name>Images\tortoise</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\tortoise.xnb</Output>
-      <Time>2015-02-19T06:48:00.3468302-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

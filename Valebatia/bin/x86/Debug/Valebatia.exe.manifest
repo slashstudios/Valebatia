@@ -62,14 +62,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Valebatia.exe" size="11776">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Valebatia.exe" size="12800">
       <assemblyIdentity name="Valebatia" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>eGqSKTWkU4vbpZ0v7uj7jGUfPoA=</dsig:DigestValue>
+        <dsig:DigestValue>8MOD/GuVlelpk/aexf8Nyy3UkIM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -80,6 +80,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>tT1fRFMLy1gVH0WPl9+DFB3yxa0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Images\itemtoolbar.xnb" size="10887">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>9aWtddebMNM6CjHXoLDHyqHb+VQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Images\player.xnb" size="4283">
@@ -106,7 +115,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>Yi2B2Wp/9YLvGZAqcmHsMFN1FWs=</dsig:DigestValue>
+      <dsig:DigestValue>ChYhBU25jV1wB4hdEYx5G7eB8YM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Music\Borealis.xnb" size="126">
@@ -124,7 +133,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>CJu/e5S9tMjUMNuA3aHPgyLVCwM=</dsig:DigestValue>
+      <dsig:DigestValue>uHOD2LXvpzxh18FpAWiFmHSXJ2g=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Music\general_gps.xnb" size="129">
@@ -142,7 +151,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>56oyGXrSism2VoNKIuMLH9DvF34=</dsig:DigestValue>
+      <dsig:DigestValue>e9vkSCq4IUxKTLvGAFI5QPHnsB8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Music\Spark.xnb" size="123">
@@ -160,7 +169,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>aqyREa3xvaVJWtvNsEWI0PrTY44=</dsig:DigestValue>
+      <dsig:DigestValue>4g9g9cOvJ765VU/JgPgRZPQo3Yc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Music\The Kraken.xnb" size="128">
@@ -190,13 +199,13 @@
       <dsig:DigestValue>diNvdcDpDtGEMuMQIHpkKK3qVHc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Readme.txt" size="183">
+  <file name="Readme.txt" size="180">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>/5fAz+iHLBBFV/kUYzc0c/05cfE=</dsig:DigestValue>
+      <dsig:DigestValue>V6/h57joJ5syOHZXmLunfnszwuo=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

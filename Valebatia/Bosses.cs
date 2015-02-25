@@ -24,14 +24,19 @@ namespace Valebatia
         public static class BossStats
         {
             public static int KrakenLordHealth = 2500;
-            public static int KrakenLordDefense = 42;
+            public static int KrakenLordDefense = 32;
             public static int GiantHawkBeakedGalapagosTortoiseHealth = 3200;
-            public static int GiantHawkBeakedGalapagosTortoiseDefense = 50;
+            public static int GiantHawkBeakedGalapagosTortoiseDefense = 66;
+            public static int HugeassMechanicalSharkHealth = 4103; // Oddly Specific
+            public static int HugeassMechanicalSharkDefense = 45;
+            public static int HugeassMechanicalSharkDefeats = 0;
+            
         }
         public static class BossDeathChecklist
         {
             public static bool IsKrakenLordDefeated = false;
             public static bool IsGiantHawkBeakedGalapagosTortoiseDefeated = false;
+            public static bool IsHugeassMechanicalSharkDefeated = false;
 
 
         }
@@ -64,7 +69,6 @@ namespace Valebatia
                 Bosses.BossDeathChecklist.IsGiantHawkBeakedGalapagosTortoiseDefeated = true;
                 Bosses.BossStats.GiantHawkBeakedGalapagosTortoiseHealth = 0;
             }
-
 
             }
         }

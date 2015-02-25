@@ -19,6 +19,15 @@ using System.Threading;
 namespace Valebatia
 {
     // Enumerators
+    public enum HMSstages
+    {
+        Copper,
+        Galvanized_Iron,
+        Carbon,
+        Titanium,
+        Depleted_Uranium
+        
+    }
     public enum devUID
     {
         epicdragonfour,
@@ -51,6 +60,7 @@ namespace Valebatia
         // Player Functions
         public struct player
         {
+            
             public static Vector2 position;
             public static Texture2D texture;
         }
@@ -58,7 +68,7 @@ namespace Valebatia
 
 
 
-
+        
         public class raceNames
         {
             // Ground Races
@@ -86,6 +96,7 @@ namespace Valebatia
         public int playerMana = 100;
         public int playerStamina = 100;
         public int timeLordLives = 13;
+        public int itemBar = 1;
         public string ConnorHeadCode = "cutwovalebatia";
         public string savegame = "savegame.vbsg";
         public float startY = 250;
@@ -97,14 +108,15 @@ namespace Valebatia
         public bool timelordLivesset = false;
         public Texture2D background;
         public Texture2D tortoise;
+        public Texture2D itemToolbar;
         public Song gen_gps;
         public Song borealis;
         public Song spark;
         public Song kraken;
         public int tortoiseHealth = 100;
         public int tortoiseDefense = 15;
+        public bool sharkhealthtemp = false;
         public Vector2 tortoisePosition;
-
 
         public Valebatia()
         {
@@ -121,9 +133,9 @@ namespace Valebatia
 
         protected override void LoadContent()
         {
-            /// Content Load Initiative
-
+            // Content Load Initiative
             spriteBatch = new SpriteBatch(this.GraphicsDevice);
+
             // Fonts and Text
             font = Content.Load<SpriteFont>("spriteFont");
 
@@ -131,6 +143,7 @@ namespace Valebatia
             player.texture = Content.Load<Texture2D>("Images/player");
             background = Content.Load<Texture2D>("Images/background");
             tortoise = Content.Load<Texture2D>("Images/tortoise");
+            itemToolbar = Content.Load<Texture2D>("Images/itemtoolbar");
 
             // Audio and Sound
             gen_gps = Content.Load<Song>("Music/general_gps");
@@ -161,7 +174,7 @@ namespace Valebatia
                 {
                     this.Exit();
                 }
-
+                
                 // Movement Controls
                 if (state.IsKeyDown(Keys.W))
                 {
@@ -238,7 +251,6 @@ namespace Valebatia
                 {
                     playerHealth = 0;
                 }
-
                 if ((playerHealth) == 0 && timeLordLives > 0 && Achievements.lockedAchievements.lachvLordofTime)
                 {
                     playerHealth = 100;
@@ -246,12 +258,57 @@ namespace Valebatia
                 }
                 if (state.IsKeyDown(Keys.U))
                 {
-                    tortoiseHealth =  tortoiseHealth - WeaponStats.currentWeaponDamage;
+                    tortoiseHealth =  tortoiseHealth - WeaponStats.damagePerAttack;
                 }
                 if ((tortoiseHealth) <= 0)
                 {
                     tortoiseHealth = 0;
                 }
+                if (state.IsKeyDown(Keys.I))
+                {
+                    Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth - 50;
+                }
+                if ((Bosses.BossStats.HugeassMechanicalSharkHealth <= 0))
+                {
+                    sharkhealthtemp = true;
+                }
+                if (sharkhealthtemp == true && Bosses.BossStats.HugeassMechanicalSharkHealth <= 0)
+                {
+                    sharkhealthtemp = false;
+                    Bosses.BossStats.HugeassMechanicalSharkDefeats = Bosses.BossStats.HugeassMechanicalSharkDefeats + 1;
+                    Bosses.BossStats.HugeassMechanicalSharkHealth = 4103;
+                }
+
+
+
+            #region HMS Stuff
+
+                if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 1)
+                {
+                    Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 2;
+                    Bosses.BossStats.HugeassMechanicalSharkDefense = Bosses.BossStats.HugeassMechanicalSharkDefense * 3 / 2;
+                }
+                if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 2)
+                {
+                    Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 4;
+                    Bosses.BossStats.HugeassMechanicalSharkDefense = Bosses.BossStats.HugeassMechanicalSharkDefense * 3 / 2;
+                }
+                if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 3)
+                {
+                    Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 6;
+                    Bosses.BossStats.HugeassMechanicalSharkDefense = Bosses.BossStats.HugeassMechanicalSharkDefense * 3 / 2;
+                }
+                if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 4)
+                {
+                    Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 8;
+                    Bosses.BossStats.HugeassMechanicalSharkDefense = Bosses.BossStats.HugeassMechanicalSharkDefense * 3 / 2;
+                }
+                if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 5)
+                {
+                    Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 10;
+                    Bosses.BossStats.HugeassMechanicalSharkDefense = Bosses.BossStats.HugeassMechanicalSharkDefense * 3 / 2;
+                }
+            #endregion
         }
 
 
@@ -264,16 +321,19 @@ namespace Valebatia
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.DrawString(font, "FPS: " + frameRate, new Vector2(80, 30), Color.Black);
             spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
-
+            spriteBatch.DrawString(font, "HMS health: " + Bosses.BossStats.HugeassMechanicalSharkHealth, new Vector2(80, 155), Color.Black);
+            spriteBatch.DrawString(font, "Defeats: " + Bosses.BossStats.HugeassMechanicalSharkDefeats, new Vector2(80, 175), Color.Black);
             if ((Achievements.lockedAchievements.lachvLordofTime) == true)
             {
                 spriteBatch.DrawString(font, "Timelord Lives: " + timeLordLives, new Vector2(80, 80), Color.Black);
             }
+
             if ((tortoiseHealth) > 0)
             {
                 spriteBatch.Draw(tortoise, tortoisePosition, Color.White);
                 spriteBatch.DrawString(font, "Tortoise Health: " + tortoiseHealth, new Vector2(80, 130), Color.Black);
             }
+
             if (tortoiseHealth == 0)
             {
                 spriteBatch.DrawString(font, "You killed the tortoise!", new Vector2(80, 130), Color.Red);

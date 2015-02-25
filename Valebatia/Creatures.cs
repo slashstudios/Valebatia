@@ -21,7 +21,7 @@ namespace Valebatia
     public class Creatures : Microsoft.Xna.Framework.GameComponent
     {
         // Types Go Here
-        public static int tortoiseDefense = 1/2;
+        public static int tortoiseDefense = 1;
 
         public Creatures(Game game)
             : base(game)
