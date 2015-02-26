@@ -115,7 +115,8 @@ namespace Valebatia
         public Song kraken;
         public int tortoiseHealth = 100;
         public int tortoiseDefense = 15;
-        public bool sharkhealthtemp = false;
+        public int sharkhealthtemp = 0;
+        public int sharkdeathtemp = 0;
         public Vector2 tortoisePosition;
 
         public Valebatia()
@@ -270,45 +271,57 @@ namespace Valebatia
                 }
                 if (Bosses.BossStats.HugeassMechanicalSharkHealth == 0)
                 {
-                    Bosses.BossStats.HugeassMechanicalSharkHealth = 4103;
                     Bosses.BossStats.HugeassMechanicalSharkDefeats = Bosses.BossStats.HugeassMechanicalSharkDefeats + 1;
+                    sharkhealthtemp = 1;
                 }
 
 
 
             #region HMS Stuff
 
-                if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 1)
+                if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 1 && sharkhealthtemp == 1)
                 {
-                    Bosses.BossStats.HugeassMechanicalSharkHealth = 8206;
-                    //Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 2;
+                    sharkhealthtemp = 0;
+                    Bosses.BossStats.HugeassMechanicalSharkHealth = 4103;
+                    Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 2;
                     Bosses.BossStats.HugeassMechanicalSharkDefense = Bosses.BossStats.HugeassMechanicalSharkDefense * 3 / 2;
                 }
-                if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 2)
+                if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 2 && sharkhealthtemp == 1)
                 {
+                    sharkhealthtemp = 0;
                     Bosses.BossStats.HugeassMechanicalSharkHealth = 4103;
                     Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 4;
                     Bosses.BossStats.HugeassMechanicalSharkDefense = Bosses.BossStats.HugeassMechanicalSharkDefense * 3 / 2;
                 }
-                if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 3)
+                if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 3 && sharkhealthtemp == 1)
                 {
+                    sharkhealthtemp = 0;
                     Bosses.BossStats.HugeassMechanicalSharkHealth = 4103;
                     Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 6;
                     Bosses.BossStats.HugeassMechanicalSharkDefense = Bosses.BossStats.HugeassMechanicalSharkDefense * 3 / 2;
                 }
-                if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 4)
+                if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 4 && sharkhealthtemp == 1)
                 {
+                    sharkhealthtemp = 0;
                     Bosses.BossStats.HugeassMechanicalSharkHealth = 4103;
                     Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 8;
                     Bosses.BossStats.HugeassMechanicalSharkDefense = Bosses.BossStats.HugeassMechanicalSharkDefense * 3 / 2;
                 }
-                if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 5)
+                if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 5 && sharkhealthtemp == 1)
                 {
+                    sharkhealthtemp = 0;
                     Bosses.BossStats.HugeassMechanicalSharkHealth = 4103;
                     Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 10;
                     Bosses.BossStats.HugeassMechanicalSharkDefense = Bosses.BossStats.HugeassMechanicalSharkDefense * 3 / 2;
+                    sharkdeathtemp = 1;
                 }
-                if (state.IsKeyDown(Keys.I))
+                if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) >= 5)
+                {
+                    Bosses.BossStats.HugeassMechanicalSharkDefeats = 5;
+                    Bosses.BossStats.HugeassMechanicalSharkHealth = 0;
+                }
+
+                if (state.IsKeyDown(Keys.I) && sharkdeathtemp == 0)
                 {
                     Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth - 150;
                 }

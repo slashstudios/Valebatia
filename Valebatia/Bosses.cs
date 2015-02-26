@@ -72,7 +72,10 @@ namespace Valebatia
                 Bosses.BossDeathChecklist.IsGiantHawkBeakedGalapagosTortoiseDefeated = true;
                 Bosses.BossStats.GiantHawkBeakedGalapagosTortoiseHealth = 0;
             }
-
+            if ((Bosses.BossStats.HugeassMechanicalSharkHealth) <= 0 && Bosses.BossStats.HugeassMechanicalSharkDefeats == 5)
+            {
+                BossDeathChecklist.IsHugeassMechanicalSharkDefeated = true;
+            }
             }
         }
     }
