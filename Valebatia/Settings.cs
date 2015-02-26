@@ -48,6 +48,8 @@ namespace Valebatia
                 Bosses.BossStats.KrakenLordHealth = Bosses.BossStats.KrakenLordHealth * 2;
                 Bosses.BossStats.HugeassMechanicalSharkDefense = Bosses.BossStats.HugeassMechanicalSharkDefense * 2;
                 Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 2;
+                Bosses.BossStats.MasterPlundererDefense = Bosses.BossStats.MasterPlundererDefense * 2;
+                Bosses.BossStats.MasterPlundererHealth = Bosses.BossStats.MasterPlundererHealth * 2;
             }
         }
     }
