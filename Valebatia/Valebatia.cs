@@ -264,19 +264,14 @@ namespace Valebatia
                 {
                     tortoiseHealth = 0;
                 }
-                if (state.IsKeyDown(Keys.I))
-                {
-                    Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth - 50;
-                }
                 if (Bosses.BossStats.HugeassMechanicalSharkHealth <= 0)
                 {
-                    sharkhealthtemp = true;
+                    Bosses.BossStats.HugeassMechanicalSharkHealth = 0;
                 }
-                if (sharkhealthtemp == true && Bosses.BossStats.HugeassMechanicalSharkHealth <= 0)
+                if (Bosses.BossStats.HugeassMechanicalSharkHealth == 0)
                 {
                     Bosses.BossStats.HugeassMechanicalSharkHealth = 4103;
                     Bosses.BossStats.HugeassMechanicalSharkDefeats = Bosses.BossStats.HugeassMechanicalSharkDefeats + 1;
-                    sharkhealthtemp = false;
                 }
 
 
@@ -285,28 +280,37 @@ namespace Valebatia
 
                 if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 1)
                 {
-                    Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 2;
+                    Bosses.BossStats.HugeassMechanicalSharkHealth = 8206;
+                    //Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 2;
                     Bosses.BossStats.HugeassMechanicalSharkDefense = Bosses.BossStats.HugeassMechanicalSharkDefense * 3 / 2;
                 }
                 if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 2)
                 {
+                    Bosses.BossStats.HugeassMechanicalSharkHealth = 4103;
                     Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 4;
                     Bosses.BossStats.HugeassMechanicalSharkDefense = Bosses.BossStats.HugeassMechanicalSharkDefense * 3 / 2;
                 }
                 if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 3)
                 {
+                    Bosses.BossStats.HugeassMechanicalSharkHealth = 4103;
                     Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 6;
                     Bosses.BossStats.HugeassMechanicalSharkDefense = Bosses.BossStats.HugeassMechanicalSharkDefense * 3 / 2;
                 }
                 if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 4)
                 {
+                    Bosses.BossStats.HugeassMechanicalSharkHealth = 4103;
                     Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 8;
                     Bosses.BossStats.HugeassMechanicalSharkDefense = Bosses.BossStats.HugeassMechanicalSharkDefense * 3 / 2;
                 }
                 if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 5)
                 {
+                    Bosses.BossStats.HugeassMechanicalSharkHealth = 4103;
                     Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 10;
                     Bosses.BossStats.HugeassMechanicalSharkDefense = Bosses.BossStats.HugeassMechanicalSharkDefense * 3 / 2;
+                }
+                if (state.IsKeyDown(Keys.I))
+                {
+                    Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth - 150;
                 }
             #endregion
         }
