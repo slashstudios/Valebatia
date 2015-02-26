@@ -30,6 +30,8 @@ namespace Valebatia
             public static int HugeassMechanicalSharkHealth = 4103; // Oddly Specific
             public static int HugeassMechanicalSharkDefense = 45;
             public static int HugeassMechanicalSharkDefeats = 0;
+            public static int MasterPlundererHealth = 1500;
+            public static int MasterPlundererDefense = 17;
             
         }
         public static class BossDeathChecklist
@@ -37,6 +39,7 @@ namespace Valebatia
             public static bool IsKrakenLordDefeated = false;
             public static bool IsGiantHawkBeakedGalapagosTortoiseDefeated = false;
             public static bool IsHugeassMechanicalSharkDefeated = false;
+            public static bool IsMasterPlundererDefeated = false;
 
 
         }

@@ -46,6 +46,8 @@ namespace Valebatia
                 Bosses.BossStats.GiantHawkBeakedGalapagosTortoiseHealth = Bosses.BossStats.GiantHawkBeakedGalapagosTortoiseHealth * 2;
                 Bosses.BossStats.KrakenLordDefense = Bosses.BossStats.KrakenLordDefense * 2;
                 Bosses.BossStats.KrakenLordHealth = Bosses.BossStats.KrakenLordHealth * 2;
+                Bosses.BossStats.HugeassMechanicalSharkDefense = Bosses.BossStats.HugeassMechanicalSharkDefense * 2;
+                Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 2;
             }
         }
     }

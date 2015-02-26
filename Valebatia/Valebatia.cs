@@ -268,15 +268,15 @@ namespace Valebatia
                 {
                     Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth - 50;
                 }
-                if ((Bosses.BossStats.HugeassMechanicalSharkHealth <= 0))
+                if (Bosses.BossStats.HugeassMechanicalSharkHealth <= 0)
                 {
                     sharkhealthtemp = true;
                 }
                 if (sharkhealthtemp == true && Bosses.BossStats.HugeassMechanicalSharkHealth <= 0)
                 {
-                    sharkhealthtemp = false;
-                    Bosses.BossStats.HugeassMechanicalSharkDefeats = Bosses.BossStats.HugeassMechanicalSharkDefeats + 1;
                     Bosses.BossStats.HugeassMechanicalSharkHealth = 4103;
+                    Bosses.BossStats.HugeassMechanicalSharkDefeats = Bosses.BossStats.HugeassMechanicalSharkDefeats + 1;
+                    sharkhealthtemp = false;
                 }
 
 
