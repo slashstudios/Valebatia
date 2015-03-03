@@ -26,7 +26,6 @@ namespace Valebatia
         Carbon,
         Titanium,
         Depleted_Uranium
-        
     }
     public enum devUID
     {
@@ -61,37 +60,13 @@ namespace Valebatia
         public struct player
         {
             
-            public static Vector2 position;
+            public static Vector2 position = new Vector2(100,300);
             public static Texture2D texture;
-        }
-
-
-
-
-        
-        public class raceNames
-        {
-            // Ground Races
-            public static bool raceHuman = true;
-            public static bool raceGorilla = true;
-            // Aquatic Races
-            public static bool raceSharkman = true;
-
-            public class hiddenRaceNames
-            {
-                public static bool raceTimelord = false;
-                public static bool raceAndroid = false;
-                public static bool raceKraken = false;
-                public static bool raceDeveloper = false;
-                public static bool raceDolphin = false;
-
-            }
-
         }
 
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        public SpriteFont font;
+        public SpriteFont font; 
         public int playerHealth = 100;
         public int playerMana = 100;
         public int playerStamina = 100;
@@ -106,6 +81,9 @@ namespace Valebatia
         public bool paused = false;
         public bool released = false;
         public bool timelordLivesset = false;
+        public bool iskeydown = true;
+        public bool iskeydownregen = true;
+        public Texture2D dirt;
         public Texture2D background;
         public Texture2D tortoise;
         public Texture2D itemToolbar;
@@ -117,19 +95,22 @@ namespace Valebatia
         public int tortoiseDefense = 15;
         public int sharkhealthtemp = 0;
         public int sharkdeathtemp = 0;
-        public Vector2 tortoisePosition;
+        public Vector2 tortoisePosition = new Vector2(200,200);
+        public Vector2 dirtPosition = new Vector2(600, 300);
+        MouseState mousepos = Mouse.GetState();
 
         public Valebatia()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             this.Window.Title = "Valebatia";
-            this.IsMouseVisible = true;
+            this.IsMouseVisible = true; 
+            this.Components.Add(new GamerServicesComponent(this));
         }
+
         protected override void Initialize()
         {
             base.Initialize();
-
         }
 
         protected override void LoadContent()
@@ -139,8 +120,10 @@ namespace Valebatia
 
             // Fonts and Text
             font = Content.Load<SpriteFont>("spriteFont");
+                
 
             // Textures and Images
+            dirt = Content.Load<Texture2D>("Images/dirt");
             player.texture = Content.Load<Texture2D>("Images/player");
             background = Content.Load<Texture2D>("Images/background");
             tortoise = Content.Load<Texture2D>("Images/tortoise");
@@ -152,17 +135,15 @@ namespace Valebatia
             spark = Content.Load<Song>("Music/Spark");
             kraken = Content.Load<Song>("Music/The Kraken");
 
-            // Type Definitions
-            tortoisePosition = new Vector2(200,200);
+            // Armor Textures
+            Armors.Copper.chestplate = Content.Load<Texture2D>("Images/copperchestplate");
+
+            // Race Textures
+            Races.sharkpersonsprite = Content.Load<Texture2D>("Images/sharkrace");
         }
-
-
-        protected override void UnloadContent()
-        {
-            // Unload Content Initiative
-        }
-
-        
+            
+        protected override void UnloadContent() { }
+            
         protected override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
@@ -175,8 +156,8 @@ namespace Valebatia
                 {
                     this.Exit();
                 }
-                
-                // Movement Controls
+
+                #region Player Movement
                 if (state.IsKeyDown(Keys.W))
                 {
                     Valebatia.player.position.Y -= 2;
@@ -193,6 +174,23 @@ namespace Valebatia
                 {
                     Valebatia.player.position.X += 2;
                 }
+                if (state.IsKeyDown(Keys.W) && state.IsKeyDown(Keys.LeftShift))
+                {
+                    Valebatia.player.position.Y -= 4;
+                }
+                if (state.IsKeyDown(Keys.A) && state.IsKeyDown(Keys.LeftShift))
+                {
+                    Valebatia.player.position.X -= 4;
+                }
+                if (state.IsKeyDown(Keys.S) && state.IsKeyDown(Keys.LeftShift))
+                {
+                    Valebatia.player.position.Y += 4;
+                }
+                if (state.IsKeyDown(Keys.D) && state.IsKeyDown(Keys.LeftShift))
+                {
+                    Valebatia.player.position.X += 4;
+                }
+                #endregion
 
                 #region Jump Physics
                 if (jumping)
@@ -218,7 +216,7 @@ namespace Valebatia
                 }
                 #endregion
 
-                // Player Functions
+                #region Player Boundaries
                 if ((player.position.Y) <= 0)
                 {
                     player.position.Y = 0;
@@ -230,6 +228,16 @@ namespace Valebatia
                 if ((player.position.X) == 480)
                 {
                     player.position.X = 480;
+                }
+                #endregion
+
+                if (state.IsKeyDown(Keys.NumPad9))
+                {
+                    Races.selectedRace = 1;
+                }
+                if (state.IsKeyDown(Keys.NumPad3))
+                {
+                    Races.selectedRace = 2;
                 }
                 if (state.IsKeyDown(Keys.P))
                 {
@@ -265,6 +273,11 @@ namespace Valebatia
                 {
                     tortoiseHealth = 0;
                 }
+
+
+
+            #region HMS Stuff
+
                 if (Bosses.BossStats.HugeassMechanicalSharkHealth <= 0)
                 {
                     Bosses.BossStats.HugeassMechanicalSharkHealth = 0;
@@ -274,10 +287,6 @@ namespace Valebatia
                     Bosses.BossStats.HugeassMechanicalSharkDefeats = Bosses.BossStats.HugeassMechanicalSharkDefeats + 1;
                     sharkhealthtemp = 1;
                 }
-
-
-
-            #region HMS Stuff
 
                 if ((Bosses.BossStats.HugeassMechanicalSharkDefeats) == 1 && sharkhealthtemp == 1)
                 {
@@ -351,18 +360,20 @@ namespace Valebatia
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.DrawString(font, "FPS: " + frameRate, new Vector2(80, 30), Color.Black);
             spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
-            spriteBatch.DrawString(font, "HMS health: " + Bosses.BossStats.HugeassMechanicalSharkHealth, new Vector2(80, 155), Color.Black);
-            // spriteBatch.DrawString(font, "Defeats: " + Bosses.BossStats.HugeassMechanicalSharkDefeats, new Vector2(80, 175), Color.Black);
-            if ((Achievements.lockedAchievements.lachvLordofTime) == true)
-            {
-                spriteBatch.DrawString(font, "Timelord Lives: " + timeLordLives, new Vector2(80, 130), Color.Black);
-            }
             if ((tortoiseHealth) > 0)
             {
                 spriteBatch.Draw(tortoise, tortoisePosition, Color.White);
                 spriteBatch.DrawString(font, "Tortoise Health: " + tortoiseHealth, new Vector2(80, 80), Color.Black);
             }
-            spriteBatch.Draw(player.texture, player.position, Color.White);
+            spriteBatch.Draw(dirt, dirtPosition, Color.White);
+            if (Races.selectedRace == 1)
+            {
+                spriteBatch.Draw(player.texture, player.position, Color.White);
+            }
+            if (Races.selectedRace == 2)
+            {
+                spriteBatch.Draw(Races.sharkpersonsprite, player.position, Color.White);
+            }
             /*if (paused == true)
             {
                 spriteBatch.Draw(background, new Rectangle(0, 0, 800, 480), Color.Black * 0.5f);

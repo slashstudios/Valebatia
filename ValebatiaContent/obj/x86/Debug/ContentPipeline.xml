@@ -86,6 +86,33 @@
       <Extra>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\general_gps.wma</Extra>
       <Time>2015-01-30T09:52:53.7438738-06:00</Time>
     </Item>
+    <Item>
+      <Source>Images\dirt.png</Source>
+      <Name>Images\dirt</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\dirt.xnb</Output>
+      <Time>2015-03-01T20:30:01.9790944-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\copperchestplate.png</Source>
+      <Name>Images\copperchestplate</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\copperchestplate.xnb</Output>
+      <Time>2015-03-02T14:09:13.5799495-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\sharkrace.png</Source>
+      <Name>Images\sharkrace</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\sharkrace.xnb</Output>
+      <Time>2015-03-03T14:40:12.7444761-06:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

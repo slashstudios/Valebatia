@@ -18,18 +18,30 @@ using System.Threading;
 
 namespace Valebatia
 {
-    public class Creatures : Microsoft.Xna.Framework.GameComponent
+    public class Races : Microsoft.Xna.Framework.GameComponent
     {
+        public static int selectedRace = 1;
         // Types Go Here
-        public static int tortoiseDefense = 1;
+        public static bool human = true;
+        public static Texture2D humansprite;
+        public static bool sharkperson = true;
+        public static Texture2D sharkpersonsprite;
+        public static bool plantrace = true;
+        public static Texture2D plantracesprite;
 
-        public class textures
+
+        public class lockedRaces
         {
-
+            public static bool timeLord = false;
+            public static Texture2D timelordsprite;
+            public static bool dolphin = false;
+            public static Texture2D dolphinsprite;
+            public static bool android = false;
+            public static Texture2D androidsprite;
+            public static bool developer = false;
 
         }
-
-        public Creatures(Game game)
+        public Races(Game game)
             : base(game)
         {
 
@@ -38,10 +50,11 @@ namespace Valebatia
         {
             base.Initialize();
         }
-
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
+
+
         }
     }
 }

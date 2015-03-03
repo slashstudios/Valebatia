@@ -11,3 +11,6 @@ Content\Music\Spark.xnb
 Content\Music\Spark.wma
 Content\Music\general_gps.xnb
 Content\Music\general_gps.wma
+Content\Images\dirt.xnb
+Content\Images\copperchestplate.xnb
+Content\Images\sharkrace.xnb

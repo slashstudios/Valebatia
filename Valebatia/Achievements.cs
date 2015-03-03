@@ -23,7 +23,7 @@ namespace Valebatia
     {
         // Achievements Go Here
         public static bool AllAchievementsUnlocked = false;
-
+        public static bool WasBetaTesterOrDebugger = false;
             public class lockedAchievements
             {
                 // Dolphin Achievement
