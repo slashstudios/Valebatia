@@ -54,7 +54,7 @@
       <Options>None</Options>
       <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\The Kraken.xnb</Output>
       <Extra>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\The Kraken.wma</Extra>
-      <Time>2015-01-30T09:49:33.2844256-06:00</Time>
+      <Time>2015-03-09T08:56:35.4187542-05:00</Time>
     </Item>
     <Item>
       <Source>Music\Borealis.mp3</Source>
@@ -102,7 +102,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\copperchestplate.xnb</Output>
-      <Time>2015-03-02T14:09:13.5799495-06:00</Time>
+      <Time>2015-03-05T13:10:35.2017446-06:00</Time>
     </Item>
     <Item>
       <Source>Images\sharkrace.png</Source>
@@ -112,6 +112,52 @@
       <Options>None</Options>
       <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\sharkrace.xnb</Output>
       <Time>2015-03-03T14:40:12.7444761-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\goose_body.png</Source>
+      <Name>Images\goose_body</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\goose_body.xnb</Output>
+      <Time>2015-03-05T10:09:28.6426917-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\goose_head.png</Source>
+      <Name>Images\goose_head</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\goose_head.xnb</Output>
+      <Time>2015-03-05T11:38:05.4588553-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\goose_rainbow.png</Source>
+      <Name>Images\goose_rainbow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\goose_rainbow.xnb</Output>
+      <Time>2015-03-04T14:05:51.6142923-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\tokyo.mp3</Source>
+      <Name>Music\tokyo</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\tokyo.xnb</Output>
+      <Extra>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\tokyo.wma</Extra>
+      <Time>2015-03-09T08:58:07.549427-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\inventory_blank.png</Source>
+      <Name>Images\inventory_blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\inventory_blank.xnb</Output>
+      <Time>2015-03-08T21:55:13.9778117-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

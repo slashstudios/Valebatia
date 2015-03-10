@@ -24,20 +24,18 @@ namespace Valebatia
         // Achievements Go Here
         public static bool AllAchievementsUnlocked = false;
         public static bool WasBetaTesterOrDebugger = false;
+        public static bool TortoiseTipper = false;
+
             public class lockedAchievements
             {
                 // Dolphin Achievement
                 public static bool lachvEcholocation = false;
-                public static string lachvEcholocationDesc = "A rare mutation of sharkpeople which can breathe on land and not in water. . . ";
                 // Timelord Achievement
                 public static bool lachvLordofTime = false;
-                public static string lachvLordofTimeDesc = "You have 13 tries. Don't ruin anyone's life.";
                 // Kraken Achievement
                 public static bool lachvTrenchWrath = false;
-                public static string lachvTrenchWrathDesc = "Something from the deep is coming. . .";
                 // Android Achievement
                 public static bool lachvBloodforWires = false;
-                public static string lachvBloodforWiresDesc = "Something from the deep is coming. . .";
 
             }
 

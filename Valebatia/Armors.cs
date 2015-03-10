@@ -29,6 +29,7 @@ namespace Valebatia
             public static int leggingsdefense;
             public static Texture2D boots;
             public static int bootsdefense;
+            public static int fullsetdefense;
         }
         public static class Steel { 
             public static Texture2D helmet;
@@ -39,6 +40,7 @@ namespace Valebatia
             public static int leggingsdefense;
             public static Texture2D boots;
             public static int bootsdefense;
+            public static int fullsetdefense;
         }
         public static class Titanium { 
             public static Texture2D helmet;
@@ -49,6 +51,7 @@ namespace Valebatia
             public static int leggingsdefense;
             public static Texture2D boots;
             public static int bootsdefense;
+            public static int fullsetdefense;
         }
         public static class Lead { 
             public static Texture2D helmet;
@@ -59,6 +62,7 @@ namespace Valebatia
             public static int leggingsdefense;
             public static Texture2D boots;
             public static int bootsdefense;
+            public static int fullsetdefense;
         }
         public static class Uranium235 { 
             public static Texture2D helmet;
@@ -69,6 +73,7 @@ namespace Valebatia
             public static int leggingsdefense;
             public static Texture2D boots;
             public static int bootsdefense;
+            public static int fullsetdefense;
         }
         public static class Plutonium240 { 
             public static Texture2D helmet;
@@ -79,6 +84,7 @@ namespace Valebatia
             public static int leggingsdefense;
             public static Texture2D boots;
             public static int bootsdefense;
+            public static int fullsetdefense;
         }
         public static class Phantom { 
             public static Texture2D helmet;
@@ -89,6 +95,7 @@ namespace Valebatia
             public static int leggingsdefense;
             public static Texture2D boots;
             public static int bootsdefense;
+            public static int fullsetdefense;
         }
         public static class Jade { 
             public static Texture2D helmet;
@@ -99,6 +106,7 @@ namespace Valebatia
             public static int leggingsdefense;
             public static Texture2D boots;
             public static int bootsdefense;
+            public static int fullsetdefense;
         } /*
         public static class  {} 
         public static class  {}
@@ -115,6 +123,7 @@ namespace Valebatia
             public static int leggingsdefense;
             public static Texture2D boots;
             public static int bootsdefense;
+            public static int fullsetdefense;
         }
         public static class Developer { 
             public static Texture2D helmet;
@@ -125,6 +134,7 @@ namespace Valebatia
             public static int leggingsdefense;
             public static Texture2D boots;
             public static int bootsdefense;
+            public static int fullsetdefense;
         }
 
         public Armors(Game game)

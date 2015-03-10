@@ -69,7 +69,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>YJjONwbPkXIt1VzJzFELVwcX7ro=</dsig:DigestValue>
+        <dsig:DigestValue>RpxSSZ9ZuUHoIYa2DtLrKzyM8XE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -88,7 +88,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>U7/tbLuEYt+ah7kfNRTYSjZaKEo=</dsig:DigestValue>
+      <dsig:DigestValue>sKqikqT5IJc8C2HwwIVJhXW6RAc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Images\dirt.xnb" size="1211">
@@ -98,6 +98,42 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>CP0dzfcLgL0kL8LKZ8rKW6fzYEo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Images\goose_body.xnb" size="4283">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>cvn9sSHsvlSr+KFTA+WXIxX66RY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Images\goose_head.xnb" size="4283">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Pmdt5m6OCQSHh8f81fFHyRFD7lY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Images\goose_rainbow.xnb" size="4283">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>kjeTiuBvJgSTUNOC6eyjbKr6iuA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Images\inventory_blank.xnb" size="90187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>t1UkOlcWDWXeKo4NKYgjQV1dmmA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Images\itemtoolbar.xnb" size="10887">
@@ -196,7 +232,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>4g9g9cOvJ765VU/JgPgRZPQo3Yc=</dsig:DigestValue>
+      <dsig:DigestValue>AcBM0KE3DAtrpkRezNHhyOM1IvM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Music\The Kraken.xnb" size="128">
@@ -206,6 +242,24 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>He1XCKGOy1qKfvGPGpQNqQlJ0kA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Music\tokyo.wma" size="4505823">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>vH8rB4GqgCA7SPquJqXOe5z964U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Music\tokyo.xnb" size="123">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ciwsPQvt9HD0HoPBtMYhqbcgAhs=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\spriteFont.xnb" size="47278">
@@ -226,19 +280,19 @@
       <dsig:DigestValue>diNvdcDpDtGEMuMQIHpkKK3qVHc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Readme.txt" size="180">
+  <file name="Readme.txt" size="161">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>V6/h57joJ5syOHZXmLunfnszwuo=</dsig:DigestValue>
+      <dsig:DigestValue>GLZfa23r2vU5mvQRoABAPmkegaQ=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
     <application>
       <!-- A list of all Windows versions that this application is designed to work with. Windows will automatically select the most compatible environment.-->
-      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
+      <!-- If your application is designed to work with Windows 7  uncomment the following supportedOS node-->
       <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
     </application>
   </compatibility>

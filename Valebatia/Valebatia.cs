@@ -27,20 +27,6 @@ namespace Valebatia
         Titanium,
         Depleted_Uranium
     }
-    public enum devUID
-    {
-        epicdragonfour,
-        shadeslayer,
-        two_cat0,
-        cupid_titanium,
-        kk_sherlokiwitz,
-        dinostep,
-        tryad,
-        scorpion3k,
-        warhawk92,
-        starhunter117,
-        kamikaze909,
-    }
     public enum bodyTypes
     {
         Lanky,
@@ -91,12 +77,12 @@ namespace Valebatia
         public Song borealis;
         public Song spark;
         public Song kraken;
+        public Song tokyo;
         public int tortoiseHealth = 100;
         public int tortoiseDefense = 15;
         public int sharkhealthtemp = 0;
         public int sharkdeathtemp = 0;
         public Vector2 tortoisePosition = new Vector2(200,200);
-        public Vector2 dirtPosition = new Vector2(600, 300);
         MouseState mousepos = Mouse.GetState();
 
         public Valebatia()
@@ -126,7 +112,6 @@ namespace Valebatia
             dirt = Content.Load<Texture2D>("Images/dirt");
             player.texture = Content.Load<Texture2D>("Images/player");
             background = Content.Load<Texture2D>("Images/background");
-            tortoise = Content.Load<Texture2D>("Images/tortoise");
             itemToolbar = Content.Load<Texture2D>("Images/itemtoolbar");
 
             // Audio and Sound
@@ -134,12 +119,19 @@ namespace Valebatia
             borealis = Content.Load<Song>("Music/Borealis");
             spark = Content.Load<Song>("Music/Spark");
             kraken = Content.Load<Song>("Music/The Kraken");
+            tokyo = Content.Load<Song>("Music/tokyo");
 
             // Armor Textures
             Armors.Copper.chestplate = Content.Load<Texture2D>("Images/copperchestplate");
 
             // Race Textures
             Races.sharkpersonsprite = Content.Load<Texture2D>("Images/sharkrace");
+
+            // Creature Textures
+            Creatures.textures.tortoise = Content.Load<Texture2D>("Images/tortoise");
+            Creatures.textures.goose_head = Content.Load<Texture2D>("Images/goose_head");
+            Creatures.textures.goose_body = Content.Load<Texture2D>("Images/goose_body");
+            Creatures.textures.goose_rainbow = Content.Load<Texture2D>("Images/goose_rainbow");
         }
             
         protected override void UnloadContent() { }
@@ -225,10 +217,15 @@ namespace Valebatia
                 {
                     player.position.X = 0;
                 }
-                if ((player.position.X) == 480)
+                if ((player.position.X) >= 778)
                 {
-                    player.position.X = 480;
+                    player.position.X = 778;
                 }
+                if ((player.position.Y) >= 448)
+                {
+                    player.position.Y = 448;
+                }
+
                 #endregion
 
                 if (state.IsKeyDown(Keys.NumPad9))
@@ -243,7 +240,7 @@ namespace Valebatia
                 {
                     playerHealth--;
                 }
-
+            
                 // Moves the Tortoise
                 tortoisePosition.X = tortoisePosition.X += 1.75f;
                 if ((tortoisePosition.X) >= 800)
@@ -272,6 +269,10 @@ namespace Valebatia
                 if ((tortoiseHealth) <= 0)
                 {
                     tortoiseHealth = 0;
+                }
+                if (state.IsKeyDown(Keys.End))
+                {
+                    Creatures.stats.goosehealth = 0;
                 }
 
 
@@ -360,12 +361,20 @@ namespace Valebatia
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.DrawString(font, "FPS: " + frameRate, new Vector2(80, 30), Color.Black);
             spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
+            if (Achievements.lockedAchievements.lachvLordofTime == true)
+            {
+                spriteBatch.DrawString(font, "Timelord Lives: " + timeLordLives, new Vector2(80, 80), Color.Black);
+            }
             if ((tortoiseHealth) > 0)
             {
-                spriteBatch.Draw(tortoise, tortoisePosition, Color.White);
-                spriteBatch.DrawString(font, "Tortoise Health: " + tortoiseHealth, new Vector2(80, 80), Color.Black);
+                spriteBatch.Draw(Creatures.textures.tortoise, tortoisePosition, Color.White);
             }
-            spriteBatch.Draw(dirt, dirtPosition, Color.White);
+            spriteBatch.Draw(Creatures.textures.goose_body, Creatures.positions.goosepos, Color.White);
+            if ((Creatures.stats.goosehealth) == 100)
+            {
+                spriteBatch.Draw(Creatures.textures.goose_head, Creatures.positions.goosepos, Color.White);
+            }
+            spriteBatch.Draw(Creatures.textures.goose_rainbow, new Vector2(400, 150), Color.White);
             if (Races.selectedRace == 1)
             {
                 spriteBatch.Draw(player.texture, player.position, Color.White);
@@ -376,6 +385,7 @@ namespace Valebatia
             }
             /*if (paused == true)
             {
+             * 
                 spriteBatch.Draw(background, new Rectangle(0, 0, 800, 480), Color.Black * 0.5f);
             }
              */
