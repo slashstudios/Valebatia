@@ -15,8 +15,6 @@ using Microsoft.Xna.Framework.Storage;
 using System.Diagnostics;
 using System.Threading;
 
-
-
 namespace Valebatia
 {
     public class Achievements : Microsoft.Xna.Framework.GameComponent

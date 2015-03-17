@@ -15,12 +15,12 @@ using Microsoft.Xna.Framework.Storage;
 using System.Diagnostics;
 using System.Threading;
 
-
 namespace Valebatia
 {
     public class Settings : Microsoft.Xna.Framework.GameComponent
     {
         // Types Go Here
+        public static bool hardmodeset = true;
         public static bool hardmode = false;
         public static bool fullscreen = false;
         public static bool isDeveloper = true;
@@ -40,7 +40,7 @@ namespace Valebatia
         {
             base.Update(gameTime);
 
-            if ((hardmode) == true)
+            if ((hardmode) == true && hardmodeset == true)
             {
                 Bosses.BossStats.GiantHawkBeakedGalapagosTortoiseDefense = Bosses.BossStats.GiantHawkBeakedGalapagosTortoiseDefense * 2;
                 Bosses.BossStats.GiantHawkBeakedGalapagosTortoiseHealth = Bosses.BossStats.GiantHawkBeakedGalapagosTortoiseHealth * 2;
@@ -50,6 +50,7 @@ namespace Valebatia
                 Bosses.BossStats.HugeassMechanicalSharkHealth = Bosses.BossStats.HugeassMechanicalSharkHealth * 2;
                 Bosses.BossStats.MasterPlundererDefense = Bosses.BossStats.MasterPlundererDefense * 2;
                 Bosses.BossStats.MasterPlundererHealth = Bosses.BossStats.MasterPlundererHealth * 2;
+                hardmodeset = false;
             }
         }
     }

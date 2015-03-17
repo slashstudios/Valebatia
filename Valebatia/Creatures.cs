@@ -15,7 +15,6 @@ using Microsoft.Xna.Framework.Storage;
 using System.Diagnostics;
 using System.Threading;
 
-
 namespace Valebatia
 {
     public class Creatures : Microsoft.Xna.Framework.GameComponent

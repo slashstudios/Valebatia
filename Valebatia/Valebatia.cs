@@ -38,7 +38,7 @@ namespace Valebatia
         Android,
         Kraken
     }
-
+    
 
     public class Valebatia : Microsoft.Xna.Framework.Game
     {
@@ -73,6 +73,8 @@ namespace Valebatia
         public Texture2D background;
         public Texture2D tortoise;
         public Texture2D itemToolbar;
+        public Texture2D raceSelect;
+        public Texture2D blacktile;
         public Song gen_gps;
         public Song borealis;
         public Song spark;
@@ -84,7 +86,6 @@ namespace Valebatia
         public int sharkdeathtemp = 0;
         public Vector2 tortoisePosition = new Vector2(200,200);
         MouseState mousepos = Mouse.GetState();
-
         public Valebatia()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -93,6 +94,7 @@ namespace Valebatia
             this.IsMouseVisible = true; 
             this.Components.Add(new GamerServicesComponent(this));
         }
+        
 
         protected override void Initialize()
         {
@@ -101,18 +103,14 @@ namespace Valebatia
 
         protected override void LoadContent()
         {
-            // Content Load Initiative
+            blacktile = Content.Load<Texture2D>("Images/Tiles/blacksquare");
+            // Fonts and Graphics
             spriteBatch = new SpriteBatch(this.GraphicsDevice);
+            this.font = Content.Load<SpriteFont>("spriteFont");
 
-            // Fonts and Text
-            font = Content.Load<SpriteFont>("spriteFont");
-                
-
-            // Textures and Images
-            dirt = Content.Load<Texture2D>("Images/dirt");
-            player.texture = Content.Load<Texture2D>("Images/player");
-            background = Content.Load<Texture2D>("Images/background");
-            itemToolbar = Content.Load<Texture2D>("Images/itemtoolbar");
+            // GUI
+            itemToolbar = Content.Load<Texture2D>("Images/GUI/itemtoolbar");
+            raceSelect = Content.Load<Texture2D>("Images/GUI/race_select");
 
             // Audio and Sound
             gen_gps = Content.Load<Song>("Music/general_gps");
@@ -122,16 +120,24 @@ namespace Valebatia
             tokyo = Content.Load<Song>("Music/tokyo");
 
             // Armor Textures
-            Armors.Copper.chestplate = Content.Load<Texture2D>("Images/copperchestplate");
+            Armors.Copper.chestplate = Content.Load<Texture2D>("Images/Armors/Copper/copperchestplate");
 
             // Race Textures
-            Races.sharkpersonsprite = Content.Load<Texture2D>("Images/sharkrace");
+            player.texture = Content.Load<Texture2D>("Images/Races/player");
+            Races.sharkpersonsprite = Content.Load<Texture2D>("Images/Races/sharkrace");
+            Races.plantracesprite = Content.Load<Texture2D>("Images/Races/race_plant");
 
             // Creature Textures
-            Creatures.textures.tortoise = Content.Load<Texture2D>("Images/tortoise");
-            Creatures.textures.goose_head = Content.Load<Texture2D>("Images/goose_head");
-            Creatures.textures.goose_body = Content.Load<Texture2D>("Images/goose_body");
-            Creatures.textures.goose_rainbow = Content.Load<Texture2D>("Images/goose_rainbow");
+            Creatures.textures.tortoise = Content.Load<Texture2D>("Images/Creatures/tortoise");
+            Creatures.textures.goose_head = Content.Load<Texture2D>("Images/Creatures/goose_head");
+            Creatures.textures.goose_body = Content.Load<Texture2D>("Images/Creatures/goose_body");
+            Creatures.textures.goose_rainbow = Content.Load<Texture2D>("Images/Creatures/goose_rainbow");
+
+            // Items 
+                // Misc Items
+            Items.misc.penguin_paint_blue = Content.Load<Texture2D>("Images/Items/Misc/spraypaint_blue");
+            Items.misc.penguin_paint_red = Content.Load<Texture2D>("Images/Items/Misc/spraypaint_red");
+            Items.misc.penguin_paint_yellow = Content.Load<Texture2D>("Images/Items/Misc/spraypaint_yellow");
         }
             
         protected override void UnloadContent() { }
@@ -228,14 +234,42 @@ namespace Valebatia
 
                 #endregion
 
-                if (state.IsKeyDown(Keys.NumPad9))
+                #region Race Selection
+                if ((mousepos.X < 50 && mousepos.X > 0 && mousepos.Y < 50 && mousepos.Y > 0) && mouseState.LeftButton == ButtonState.Pressed)
                 {
-                    Races.selectedRace = 1;
+                   Races.human = true;
+                   Races.plantrace = false;
+                   Races.sharkperson = false;
+                   Races.lockedRaces.android = false;
+                   Races.lockedRaces.developer = false;
+                   Races.lockedRaces.dolphin = false;
+                   Races.lockedRaces.timeLord = false;
                 }
-                if (state.IsKeyDown(Keys.NumPad3))
+                if ((mousepos.X < 100 && mousepos.X > 50 && mousepos.Y < 100 && mousepos.Y > 50) && mouseState.LeftButton == ButtonState.Pressed)
                 {
-                    Races.selectedRace = 2;
+
+                    Races.human = false;
+                    Races.plantrace = true;
+                    Races.sharkperson = false;
+                    Races.lockedRaces.android = false;
+                    Races.lockedRaces.developer = false;
+                    Races.lockedRaces.dolphin = false;
+                    Races.lockedRaces.timeLord = false;
                 }
+                if ((mousepos.X < 100 && mousepos.X > 50 && mousepos.Y < 100 && mousepos.Y > 50) && mouseState.LeftButton == ButtonState.Pressed)
+                {
+
+                    Races.human = false;
+                    Races.plantrace = true;
+                    Races.sharkperson = false;
+                    Races.lockedRaces.android = false;
+                    Races.lockedRaces.developer = false;
+                    Races.lockedRaces.dolphin = false;
+                    Races.lockedRaces.timeLord = false;
+                }
+                #endregion
+
+                #region Developer Stuff
                 if (state.IsKeyDown(Keys.P))
                 {
                     playerHealth--;
@@ -247,7 +281,8 @@ namespace Valebatia
                 {
                     tortoisePosition.X = 0;
                 }
-                
+
+                #region Timelord Stuff
                 // Developer Testing Stuff
                 if (state.IsKeyDown(Keys.O))
                 {
@@ -262,6 +297,8 @@ namespace Valebatia
                     playerHealth = 100;
                     timeLordLives--;
                 }
+                #endregion
+
                 if (state.IsKeyDown(Keys.U))
                 {
                     tortoiseHealth =  tortoiseHealth - WeaponStats.damagePerAttack;
@@ -274,10 +311,9 @@ namespace Valebatia
                 {
                     Creatures.stats.goosehealth = 0;
                 }
+                #endregion
 
-
-
-            #region HMS Stuff
+                #region HMS Stuff
 
                 if (Bosses.BossStats.HugeassMechanicalSharkHealth <= 0)
                 {
@@ -359,12 +395,13 @@ namespace Valebatia
             KeyboardState state = Keyboard.GetState();
             spriteBatch.Begin();
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            spriteBatch.DrawString(font, "FPS: " + frameRate, new Vector2(80, 30), Color.Black);
-            spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(80, 55), Color.Black);
+            //spriteBatch.DrawString(font, "FPS: " + frameRate, new Vector2(300, 30), Color.Black);
+            spriteBatch.DrawString(font, "Health:  " + playerHealth, new Vector2(300, 55), Color.Black);
             if (Achievements.lockedAchievements.lachvLordofTime == true)
             {
-                spriteBatch.DrawString(font, "Timelord Lives: " + timeLordLives, new Vector2(80, 80), Color.Black);
+                spriteBatch.DrawString(font, "Timelord Lives: " + timeLordLives, new Vector2(300, 80), Color.Black);
             }
+            spriteBatch.Draw(blacktile, new Vector2(490, 240), Color.White);
             if ((tortoiseHealth) > 0)
             {
                 spriteBatch.Draw(Creatures.textures.tortoise, tortoisePosition, Color.White);
@@ -375,13 +412,19 @@ namespace Valebatia
                 spriteBatch.Draw(Creatures.textures.goose_head, Creatures.positions.goosepos, Color.White);
             }
             spriteBatch.Draw(Creatures.textures.goose_rainbow, new Vector2(400, 150), Color.White);
-            if (Races.selectedRace == 1)
+            spriteBatch.Draw(raceSelect, new Vector2(0, 0), Color.White);
+            spriteBatch.Draw(player.texture, player.position, Color.White);
+            if (Races.human == true)
             {
                 spriteBatch.Draw(player.texture, player.position, Color.White);
             }
-            if (Races.selectedRace == 2)
+            if (Races.sharkperson == true)
             {
                 spriteBatch.Draw(Races.sharkpersonsprite, player.position, Color.White);
+            }
+            if (Races.plantrace == true)
+            {
+                spriteBatch.Draw(Races.plantracesprite, player.position, Color.White);
             }
             /*if (paused == true)
             {
@@ -391,6 +434,24 @@ namespace Valebatia
              */
             base.Draw(gameTime);
             spriteBatch.End();
+            if (state.IsKeyDown(Keys.D1))
+            {
+                spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive);
+                spriteBatch.Draw(Items.misc.penguin_paint_red, new Vector2(500, 250), Color.White);
+                spriteBatch.End();
+            }
+             if (state.IsKeyDown(Keys.D2))
+             {
+                spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive);
+                spriteBatch.Draw(Items.misc.penguin_paint_blue, new Vector2(500, 250), Color.White);
+                spriteBatch.End();
+             }
+             if (state.IsKeyDown(Keys.D3))
+             {
+                spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive);
+                spriteBatch.Draw(Items.misc.penguin_paint_yellow, new Vector2(500, 250), Color.White);
+                spriteBatch.End();
+             }
         }
 
 

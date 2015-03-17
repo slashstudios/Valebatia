@@ -11,42 +11,6 @@
       <Time>2014-11-22T21:36:08-06:00</Time>
     </Item>
     <Item>
-      <Source>Images\player.png</Source>
-      <Name>Images\player</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\player.xnb</Output>
-      <Time>2015-01-15T09:54:49.3639894-06:00</Time>
-    </Item>
-    <Item>
-      <Source>Images\background.png</Source>
-      <Name>Images\background</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\background.xnb</Output>
-      <Time>2015-01-07T12:30:37.0427256-06:00</Time>
-    </Item>
-    <Item>
-      <Source>Images\tortoise.png</Source>
-      <Name>Images\tortoise</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\tortoise.xnb</Output>
-      <Time>2015-02-19T06:48:00.3468302-06:00</Time>
-    </Item>
-    <Item>
-      <Source>Images\itemtoolbar.png</Source>
-      <Name>Images\itemtoolbar</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\itemtoolbar.xnb</Output>
-      <Time>2015-02-23T12:53:48.648773-06:00</Time>
-    </Item>
-    <Item>
       <Source>Music\The Kraken.mp3</Source>
       <Name>Music\The Kraken</Name>
       <Importer>Mp3Importer</Importer>
@@ -87,60 +51,6 @@
       <Time>2015-01-30T09:52:53.7438738-06:00</Time>
     </Item>
     <Item>
-      <Source>Images\dirt.png</Source>
-      <Name>Images\dirt</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\dirt.xnb</Output>
-      <Time>2015-03-01T20:30:01.9790944-06:00</Time>
-    </Item>
-    <Item>
-      <Source>Images\copperchestplate.png</Source>
-      <Name>Images\copperchestplate</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\copperchestplate.xnb</Output>
-      <Time>2015-03-05T13:10:35.2017446-06:00</Time>
-    </Item>
-    <Item>
-      <Source>Images\sharkrace.png</Source>
-      <Name>Images\sharkrace</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\sharkrace.xnb</Output>
-      <Time>2015-03-03T14:40:12.7444761-06:00</Time>
-    </Item>
-    <Item>
-      <Source>Images\goose_body.png</Source>
-      <Name>Images\goose_body</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\goose_body.xnb</Output>
-      <Time>2015-03-05T10:09:28.6426917-06:00</Time>
-    </Item>
-    <Item>
-      <Source>Images\goose_head.png</Source>
-      <Name>Images\goose_head</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\goose_head.xnb</Output>
-      <Time>2015-03-05T11:38:05.4588553-06:00</Time>
-    </Item>
-    <Item>
-      <Source>Images\goose_rainbow.png</Source>
-      <Name>Images\goose_rainbow</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\goose_rainbow.xnb</Output>
-      <Time>2015-03-04T14:05:51.6142923-06:00</Time>
-    </Item>
-    <Item>
       <Source>Music\tokyo.mp3</Source>
       <Name>Music\tokyo</Name>
       <Importer>Mp3Importer</Importer>
@@ -151,13 +61,139 @@
       <Time>2015-03-09T08:58:07.549427-05:00</Time>
     </Item>
     <Item>
-      <Source>Images\inventory_blank.png</Source>
-      <Name>Images\inventory_blank</Name>
+      <Source>Images\Armors\Copper\copperchestplate.png</Source>
+      <Name>Images\Armors\Copper\copperchestplate</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\inventory_blank.xnb</Output>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Armors\Copper\copperchestplate.xnb</Output>
+      <Time>2015-03-05T13:10:35.2017446-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Creatures\goose_body.png</Source>
+      <Name>Images\Creatures\goose_body</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Creatures\goose_body.xnb</Output>
+      <Time>2015-03-05T10:09:28.6426917-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Creatures\goose_head.png</Source>
+      <Name>Images\Creatures\goose_head</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Creatures\goose_head.xnb</Output>
+      <Time>2015-03-05T11:38:05.4588553-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Creatures\goose_rainbow.png</Source>
+      <Name>Images\Creatures\goose_rainbow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Creatures\goose_rainbow.xnb</Output>
+      <Time>2015-03-04T14:05:51.6142923-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Creatures\tortoise.png</Source>
+      <Name>Images\Creatures\tortoise</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Creatures\tortoise.xnb</Output>
+      <Time>2015-02-19T06:48:00.3468302-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\GUI\inventory_blank.png</Source>
+      <Name>Images\GUI\inventory_blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\GUI\inventory_blank.xnb</Output>
       <Time>2015-03-08T21:55:13.9778117-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\GUI\itemtoolbar.png</Source>
+      <Name>Images\GUI\itemtoolbar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\GUI\itemtoolbar.xnb</Output>
+      <Time>2015-02-23T12:53:48.648773-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\GUI\race_select.png</Source>
+      <Name>Images\GUI\race_select</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\GUI\race_select.xnb</Output>
+      <Time>2015-03-16T08:50:58.6455575-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Races\player.png</Source>
+      <Name>Images\Races\player</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Races\player.xnb</Output>
+      <Time>2015-01-15T09:54:49.3639894-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Races\race_plant.png</Source>
+      <Name>Images\Races\race_plant</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Races\race_plant.xnb</Output>
+      <Time>2015-03-16T09:08:13.7766838-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Races\sharkrace.png</Source>
+      <Name>Images\Races\sharkrace</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Races\sharkrace.xnb</Output>
+      <Time>2015-03-03T14:40:12.7444761-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Items\Misc\spraypaint_blue.png</Source>
+      <Name>Images\Items\Misc\spraypaint_blue</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Items\Misc\spraypaint_blue.xnb</Output>
+      <Time>2015-03-16T14:00:17.2118003-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Items\Misc\spraypaint_red.png</Source>
+      <Name>Images\Items\Misc\spraypaint_red</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Items\Misc\spraypaint_red.xnb</Output>
+      <Time>2015-03-16T13:58:58.7461528-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Items\Misc\spraypaint_yellow.png</Source>
+      <Name>Images\Items\Misc\spraypaint_yellow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Items\Misc\spraypaint_yellow.xnb</Output>
+      <Time>2015-03-16T14:00:54.5352311-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Tiles\blacksquare.png</Source>
+      <Name>Images\Tiles\blacksquare</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Tiles\blacksquare.xnb</Output>
+      <Time>2015-03-16T14:37:15.4771419-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

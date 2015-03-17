@@ -15,20 +15,44 @@ using Microsoft.Xna.Framework.Storage;
 using System.Diagnostics;
 using System.Threading;
 
+public enum races
+{
+    human,
+    shark,
+    plant,
+    dolphin,
+    timelord,
+    android,
+    developer
+}
+public enum genders
+{
+    male,
+    female,
+}
 
 namespace Valebatia
 {
     public class Races : Microsoft.Xna.Framework.GameComponent
     {
-        public static int selectedRace = 1;
+        // Integers
+        // 1: Human
+        // 2: Shark
+        // 3: Plant
+        // 4: Dolphin
+        // 5: Timelord
+        // 6: Android
+        // 10: Developer
+
+        
         // Types Go Here
         public static bool human = true;
         public static Texture2D humansprite;
-        public static bool sharkperson = true;
+        public static bool sharkperson = false;
         public static Texture2D sharkpersonsprite;
-        public static bool plantrace = true;
+        public static bool plantrace = false;
         public static Texture2D plantracesprite;
-
+        
 
         public class lockedRaces
         {
@@ -39,6 +63,7 @@ namespace Valebatia
             public static bool android = false;
             public static Texture2D androidsprite;
             public static bool developer = false;
+            public static Texture2D developersprite;
 
         }
         public Races(Game game)
@@ -53,7 +78,10 @@ namespace Valebatia
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-
+            if (1 == 1)
+            {
+                
+            }
 
         }
     }

@@ -39,8 +39,6 @@ C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\obj\x86\Debu
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Music\general_gps.xnb
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\bin\x86\Debug\Content\Music\general_gps.wma
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\Valebatia\obj\x86\Debug\Valebatia.TrustInfo.xml
-C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\player.xnb
-C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\background.xnb
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Borealis.xnb
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\Spark.xnb
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\general_gps.xnb
@@ -61,14 +59,20 @@ C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\obj\x86\Debug\Valebati
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\The Kraken.xnb
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\The Kraken.wma
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\spriteFont.xnb
-C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\tortoise.xnb
-C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\itemtoolbar.xnb
-C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\dirt.xnb
-C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\copperchestplate.xnb
-C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\sharkrace.xnb
-C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\goose_body.xnb
-C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\goose_head.xnb
-C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\goose_rainbow.xnb
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\tokyo.xnb
 C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Music\tokyo.wma
-C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\inventory_blank.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Armors\Copper\copperchestplate.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Creatures\goose_body.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Creatures\goose_head.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Creatures\goose_rainbow.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Creatures\tortoise.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\GUI\inventory_blank.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\GUI\itemtoolbar.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\GUI\race_select.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Races\player.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Races\race_plant.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Races\sharkrace.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Items\Misc\spraypaint_blue.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Items\Misc\spraypaint_red.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Items\Misc\spraypaint_yellow.xnb
+C:\Users\Connor\Desktop\SLASH Studios\Valebatia\Valebatia\bin\x86\Debug\Content\Images\Tiles\blacksquare.xnb
