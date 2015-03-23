@@ -234,41 +234,6 @@ namespace Valebatia
 
                 #endregion
 
-                #region Race Selection
-                if ((mousepos.X < 50 && mousepos.X > 0 && mousepos.Y < 50 && mousepos.Y > 0) && mouseState.LeftButton == ButtonState.Pressed)
-                {
-                   Races.human = true;
-                   Races.plantrace = false;
-                   Races.sharkperson = false;
-                   Races.lockedRaces.android = false;
-                   Races.lockedRaces.developer = false;
-                   Races.lockedRaces.dolphin = false;
-                   Races.lockedRaces.timeLord = false;
-                }
-                if ((mousepos.X < 100 && mousepos.X > 50 && mousepos.Y < 100 && mousepos.Y > 50) && mouseState.LeftButton == ButtonState.Pressed)
-                {
-
-                    Races.human = false;
-                    Races.plantrace = true;
-                    Races.sharkperson = false;
-                    Races.lockedRaces.android = false;
-                    Races.lockedRaces.developer = false;
-                    Races.lockedRaces.dolphin = false;
-                    Races.lockedRaces.timeLord = false;
-                }
-                if ((mousepos.X < 100 && mousepos.X > 50 && mousepos.Y < 100 && mousepos.Y > 50) && mouseState.LeftButton == ButtonState.Pressed)
-                {
-
-                    Races.human = false;
-                    Races.plantrace = true;
-                    Races.sharkperson = false;
-                    Races.lockedRaces.android = false;
-                    Races.lockedRaces.developer = false;
-                    Races.lockedRaces.dolphin = false;
-                    Races.lockedRaces.timeLord = false;
-                }
-                #endregion
-
                 #region Developer Stuff
                 if (state.IsKeyDown(Keys.P))
                 {
@@ -310,6 +275,26 @@ namespace Valebatia
                 if (state.IsKeyDown(Keys.End))
                 {
                     Creatures.stats.goosehealth = 0;
+                }
+                #endregion
+
+                #region Goose Movement
+
+                if (state.IsKeyDown(Keys.NumPad8))
+                {
+                    Creatures.positions.goosepos.Y -= 2;
+                }
+                if (state.IsKeyDown(Keys.NumPad4))
+                {
+                    Creatures.positions.goosepos.X -= 2;
+                }
+                if (state.IsKeyDown(Keys.NumPad2))
+                {
+                    Creatures.positions.goosepos.Y += 2;
+                }
+                if (state.IsKeyDown(Keys.NumPad6))
+                {
+                    Creatures.positions.goosepos.X += 2;
                 }
                 #endregion
 
@@ -406,14 +391,12 @@ namespace Valebatia
             {
                 spriteBatch.Draw(Creatures.textures.tortoise, tortoisePosition, Color.White);
             }
-            spriteBatch.Draw(Creatures.textures.goose_body, Creatures.positions.goosepos, Color.White);
+            spriteBatch.Draw(Creatures.textures.goose_body, new Vector2(400,150), Color.White);
             if ((Creatures.stats.goosehealth) == 100)
             {
-                spriteBatch.Draw(Creatures.textures.goose_head, Creatures.positions.goosepos, Color.White);
+                spriteBatch.Draw(Creatures.textures.goose_head, new Vector2(400,150), Color.White);
             }
-            spriteBatch.Draw(Creatures.textures.goose_rainbow, new Vector2(400, 150), Color.White);
-            spriteBatch.Draw(raceSelect, new Vector2(0, 0), Color.White);
-            spriteBatch.Draw(player.texture, player.position, Color.White);
+            spriteBatch.Draw(Creatures.textures.goose_rainbow, Creatures.positions.goosepos, Color.White);
             if (Races.human == true)
             {
                 spriteBatch.Draw(player.texture, player.position, Color.White);
@@ -426,6 +409,7 @@ namespace Valebatia
             {
                 spriteBatch.Draw(Races.plantracesprite, player.position, Color.White);
             }
+            spriteBatch.Draw(raceSelect, new Vector2(0, 0), Color.White);
             /*if (paused == true)
             {
              * 

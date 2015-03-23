@@ -86,6 +86,11 @@ namespace Valebatia
                     public static Texture2D shotgun;
                     public static Texture2D hk_mathus;
                 }
+                public class super {
+                    public static Texture2D deathray_pinecone;
+                    public static Texture2D mg_paperairplane;
+
+                }
             }
             public class explosive {
                 public static Texture2D bomb;
