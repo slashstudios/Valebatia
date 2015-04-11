@@ -26,6 +26,7 @@ namespace Valebatia
                 public static Texture2D penguin_paint_blue;
                 public static Texture2D penguin_paint_yellow;
                 public static Texture2D moustache_pencil;
+                public static Texture2D big_zappy_thing;
         }
         public class tools {
             public class axes {
@@ -59,12 +60,6 @@ namespace Valebatia
                 public static Texture2D jade;
                 public static Texture2D dragon;
             }
-            public class misc {
-                public static Texture2D schwabbicus_gavel;
-                public static Texture2D skewer_katlyn;
-                public static Texture2D big_zappy_thing;
-                public static Texture2D doomsday_ignitous;
-            }
             public class ranged {
                 public class bows {
                     public static Texture2D longbow;
@@ -86,16 +81,23 @@ namespace Valebatia
                     public static Texture2D shotgun;
                     public static Texture2D hk_mathus;
                 }
-                public class super {
-                    public static Texture2D deathray_pinecone;
-                    public static Texture2D mg_paperairplane;
+            }
+            public class doomsday {
+                public static Texture2D deathray_pinecone;
+                public static Texture2D mg_paperairplane;
+                public static Texture2D nuke_uranium240_tactical;
+                public static Texture2D nuke_plutonium240_tactical;
+                public static Texture2D doomsday_ignitous;
+                public static Texture2D schwabbicus_gavel;
+                public static Texture2D skewer_katlyn;
+                public static Texture2D emp_tactical;
+                public static Texture2D emp;
 
-                }
+
             }
             public class explosive {
                 public static Texture2D bomb;
                 public static Texture2D grenade;
-                public static Texture2D nuke;
 
             }
 

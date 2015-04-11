@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
   <asmv1:assemblyIdentity name="Valebatia.exe" version="0.0.0.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
-  <description asmv2:iconFile="icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <description asmv2:iconFile="valebatia_icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Valebatia" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
@@ -10,7 +10,7 @@
   <trustInfo>
     <security>
       <applicationRequestMinimum>
-        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="Internet" Description="Default rights given to Internet applications" Unrestricted="true" ID="Custom" SameSite="site" />
         <defaultAssemblyRequest permissionSetReference="Custom" />
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -63,14 +63,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Valebatia.exe" size="25600">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Valebatia.exe" size="121344">
       <assemblyIdentity name="Valebatia" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>CEMSEFo1x1xWhaYwRldnGgY89pg=</dsig:DigestValue>
+        <dsig:DigestValue>LvPjPYJU1h0eMvfEYxdMOtKccHU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -317,24 +317,6 @@
       <dsig:DigestValue>diNvdcDpDtGEMuMQIHpkKK3qVHc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="icon.ico" size="5430">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>42bbxuAQVK/TUGI2t4aaQvFgsB0=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Illuminati.txt" size="1813">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>kuJa6N3lZ3Py6Z+0LBeClKcxn/0=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="Readme.txt" size="161">
     <hash>
       <dsig:Transforms>
@@ -344,6 +326,25 @@
       <dsig:DigestValue>GLZfa23r2vU5mvQRoABAPmkegaQ=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="valebatia_icon.ico" size="99678">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>hG0p0hFq16G+xSiayHoPJANx0mI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="valebatia_savegame.ico" size="370070">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>35dMWhXWb/jptlBr8/IWfB6rJAY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <fileAssociation extension=".vbsg" description="Valebatia Savegame" progid="Valebatia" defaultIcon="valebatia_savegame.ico" xmlns="urn:schemas-microsoft-com:clickonce.v1" />
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
     <application>
       <!-- A list of all Windows versions that this application is designed to work with. Windows will automatically select the most compatible environment.-->

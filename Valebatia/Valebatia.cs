@@ -147,6 +147,7 @@ namespace Valebatia
             base.Update(gameTime);
             float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
             KeyboardState state = Keyboard.GetState();
+            GamePadState gamePadState = GamePad.GetState(PlayerIndex.One);
             MouseState mouseState = Mouse.GetState();
 
                 // Closing Controls
@@ -187,6 +188,22 @@ namespace Valebatia
                 if (state.IsKeyDown(Keys.D) && state.IsKeyDown(Keys.LeftShift))
                 {
                     Valebatia.player.position.X += 4;
+                }
+                if (gamePadState.DPad.Down == ButtonState.Pressed) // W
+                {
+                    Valebatia.player.position.Y -= 1;
+                }
+                if (gamePadState.DPad.Down == ButtonState.Pressed) // A
+                {
+                    Valebatia.player.position.X -= 1;
+                }
+                if (gamePadState.DPad.Down == ButtonState.Pressed) // S
+                {
+                    Valebatia.player.position.Y += 1;
+                }
+                if (gamePadState.DPad.Down == ButtonState.Pressed) // D
+                {
+                    Valebatia.player.position.X += 1;
                 }
                 #endregion
 
