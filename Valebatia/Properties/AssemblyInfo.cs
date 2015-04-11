@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyTitle("Valebatia")]
 [assembly: AssemblyProduct("Valebatia")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Valebatia")]
 [assembly: AssemblyCompany("SLASH Studios")]
 [assembly: AssemblyCopyright("Copyright SLASH Studios ©  2014")]
 [assembly: AssemblyTrademark("")]

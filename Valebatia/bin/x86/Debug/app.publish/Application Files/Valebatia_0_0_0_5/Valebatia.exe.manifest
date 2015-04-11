@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Valebatia.exe" version="0.0.0.4" publicKeyToken="1df133dc88462e13" language="neutral" processorArchitecture="x86" type="win32" />
-  <description asmv2:iconFile="icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <asmv1:assemblyIdentity name="Valebatia.exe" version="0.0.0.5" publicKeyToken="dc4c20adf9dc8428" language="neutral" processorArchitecture="x86" type="win32" />
+  <description asmv2:iconFile="valebatia_icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Valebatia" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
@@ -10,7 +10,7 @@
   <trustInfo>
     <security>
       <applicationRequestMinimum>
-        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="Internet" Description="Default rights given to Internet applications" Unrestricted="true" ID="Custom" SameSite="site" />
         <defaultAssemblyRequest permissionSetReference="Custom" />
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -63,14 +63,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Valebatia.exe" size="25600">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Valebatia.exe" size="121344">
       <assemblyIdentity name="Valebatia" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>1f2apRY3TqPm16Rk6klyvpLOsek=</dsig:DigestValue>
+        <dsig:DigestValue>JfiyCEUn02DDdn8PkFUEVMpTqjw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -317,24 +317,6 @@
       <dsig:DigestValue>diNvdcDpDtGEMuMQIHpkKK3qVHc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="icon.ico" size="5430">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>42bbxuAQVK/TUGI2t4aaQvFgsB0=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Illuminati.txt" size="1813">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>kuJa6N3lZ3Py6Z+0LBeClKcxn/0=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="Readme.txt" size="161">
     <hash>
       <dsig:Transforms>
@@ -344,6 +326,25 @@
       <dsig:DigestValue>GLZfa23r2vU5mvQRoABAPmkegaQ=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="valebatia_icon.ico" size="99678">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>hG0p0hFq16G+xSiayHoPJANx0mI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="valebatia_savegame.ico" size="370070">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>35dMWhXWb/jptlBr8/IWfB6rJAY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <fileAssociation extension=".vbsg" description="Valebatia Savegame" progid="Valebatia" defaultIcon="valebatia_savegame.ico" xmlns="urn:schemas-microsoft-com:clickonce.v1" />
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
     <application>
       <!-- A list of all Windows versions that this application is designed to work with. Windows will automatically select the most compatible environment.-->
@@ -351,4 +352,4 @@
       <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
     </application>
   </compatibility>
-<publisherIdentity name="CN=CONNOR-LAPTOP\Connor" issuerKeyHash="97b558f8deeefcd00db3048d0cb9031bc70e41e9" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>pKaktzlQ2e0gS6erhrPrtrHKfD0=</DigestValue></Reference></SignedInfo><SignatureValue>gzziVyzhGZmICsBbPiPfJzOG3qZe4OOHZ8kE0O3T0UBLCoXIKp892PwA6OgXlZru4VXqrZiAbtGIuIAMXzGw+YWtcRdzsA3JDhMYBHwEWhgc0O0/EqXcr7mxIH2ESAkD57Rd25FfEww76GwHo5QBH8HuAlvJ3JHnZlMM6Y0nGtM=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>s3Rz1LWbrsfDtyUQ2ckp+iotnTsy0jrAsae1lmh5UJbPTCSwwy/XgYxxMJXXpXW1Ps0hiv2Fj8+ck9pqYEiAI/NVR0ofdoy2A4SryFnZg68Yt5ldQFk1XAI32c+Pm2L4e2+yscbzdKrfsREasXSXwwOi/8hSGwvNUtNm4CpRvlU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="3d7ccab1b6ebb386aba74b20edd95039b7a4a6a4" Description="" Url=""><as:assemblyIdentity name="Valebatia.exe" version="0.0.0.4" publicKeyToken="1df133dc88462e13" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=CONNOR-LAPTOP\Connor</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>mFA3+l6iR83jCFzAO+ghh8ly/Dg=</DigestValue></Reference></SignedInfo><SignatureValue>BhfXuYzdyOD9dpQ1l8sZ8hDZkd5+bdvv/gCRaavu4PpMXb+HNuMymq/1Wes+BJzsOBeWy+NwOJapKvTeY5IX+MfQ3xijAwWgg4caGKE50dRFQ8QbMsjG+U/6f9fuyScilMjI8LgpEEDmJbsTmGl3H/IuamwWwsZjbV02FU5lnHc=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>s3Rz1LWbrsfDtyUQ2ckp+iotnTsy0jrAsae1lmh5UJbPTCSwwy/XgYxxMJXXpXW1Ps0hiv2Fj8+ck9pqYEiAI/NVR0ofdoy2A4SryFnZg68Yt5ldQFk1XAI32c+Pm2L4e2+yscbzdKrfsREasXSXwwOi/8hSGwvNUtNm4CpRvlU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB6TCCAVKgAwIBAgIQOZmkaY6oObxCPHxVuuxO5TANBgkqhkiG9w0BAQUFADAzMTEwLwYDVQQDHigAQwBPAE4ATgBPAFIALQBMAEEAUABUAE8AUABcAEMAbwBuAG4AbwByMB4XDTE1MDEwOTIxMTEzNloXDTE2MDExMDAzMTEzNlowMzExMC8GA1UEAx4oAEMATwBOAE4ATwBSAC0ATABBAFAAVABPAFAAXABDAG8AbgBuAG8AcjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAs3Rz1LWbrsfDtyUQ2ckp+iotnTsy0jrAsae1lmh5UJbPTCSwwy/XgYxxMJXXpXW1Ps0hiv2Fj8+ck9pqYEiAI/NVR0ofdoy2A4SryFnZg68Yt5ldQFk1XAI32c+Pm2L4e2+yscbzdKrfsREasXSXwwOi/8hSGwvNUtNm4CpRvlUCAwEAATANBgkqhkiG9w0BAQUFAAOBgQBl+PqjKv3sjQdRIqQ17oEE7jYjBKKH4fU6tvh4b65gwE4w7m7Z/MoUiK+5T5SvSAFKHlHehjPQDOL1t5xlgq0Px65J9aDs/8ugnVzRoF7KqoG24sW11ThMJ9IBDLRBwoYuLFaprex7lc/jZoe8JuP2PSc1FOvA+DMXH3RepeqR+w==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+<publisherIdentity name="CN=CONNOR-LAPTOP\Connor" issuerKeyHash="8c36ca570a8defc284de91851dc0ab33993d08a1" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>7HUbSjJYiNCIbafwU/kV2kY2ats=</DigestValue></Reference></SignedInfo><SignatureValue>CO1ixuVik5ot3QBhwE6dZcXY7a3XI0QScIWsUjuEW2ZxMpi80FluKQTtl6eya4JDC/5wHcak0Oa2zN/AktRlzOQAictiC6a7MXB0kSXe/yBB5xAkLtsC4nc0qkUKN83tS5n6/L+tURVoUXXMa3IFKdSLlKJnu1JXyGy/KESq6nA=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>kb/pMwgr9wCfyEvmmmDkr2H8CExYcalEgmsEH/qQIamtFE5vO3TdSlze72x4td1CBjEsR2vKq7In5sVHC51LihaWk323BKycsgWXppKtcuxjMsuAsdqpxWKyCmEMt6BkU74WAV9Mvnu2AdOAII1vlFExlj0mBmZtWoNfK7lk/18=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="db6a3646da15f953f0a76d88d08858324a1b75ec" Description="" Url=""><as:assemblyIdentity name="Valebatia.exe" version="0.0.0.5" publicKeyToken="dc4c20adf9dc8428" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=CONNOR-LAPTOP\Connor</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>ztlYgzELF8TBFmHAbdxsVc6NCzw=</DigestValue></Reference></SignedInfo><SignatureValue>J4ziDN8cRIhOT8R55EqGfo+teGtiH3z1Pcvjd/KxSy8Fiyqxlz4TCq7Av/FZhwcwbdcAUdpAxHkzGcP2T345rGx+GJAKJ3xh3KP9e2RcAE0COQVeR6om9EFfN0o3qhnv0L6Tv6fwqxHWGtiQecqQS1GR3s9b4SSMN7P0Ce8Bpqo=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>kb/pMwgr9wCfyEvmmmDkr2H8CExYcalEgmsEH/qQIamtFE5vO3TdSlze72x4td1CBjEsR2vKq7In5sVHC51LihaWk323BKycsgWXppKtcuxjMsuAsdqpxWKyCmEMt6BkU74WAV9Mvnu2AdOAII1vlFExlj0mBmZtWoNfK7lk/18=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB6TCCAVKgAwIBAgIQVz7UrFXb3Z1NxHdzEgVPBTANBgkqhkiG9w0BAQUFADAzMTEwLwYDVQQDHigAQwBPAE4ATgBPAFIALQBMAEEAUABUAE8AUABcAEMAbwBuAG4AbwByMB4XDTE1MDQxMTE2NTc0OVoXDTE2MDQxMDIyNTc0OVowMzExMC8GA1UEAx4oAEMATwBOAE4ATwBSAC0ATABBAFAAVABPAFAAXABDAG8AbgBuAG8AcjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAkb/pMwgr9wCfyEvmmmDkr2H8CExYcalEgmsEH/qQIamtFE5vO3TdSlze72x4td1CBjEsR2vKq7In5sVHC51LihaWk323BKycsgWXppKtcuxjMsuAsdqpxWKyCmEMt6BkU74WAV9Mvnu2AdOAII1vlFExlj0mBmZtWoNfK7lk/18CAwEAATANBgkqhkiG9w0BAQUFAAOBgQBZGWf9QZYwSrrn5E5PIJQBRGSzCkPJleNSNIwN5TQarhWJmzA6dolCeA4EaAwWadK0k+0iuZ32Q4296QvuKZAa+pBMlpcYqg+Z6s+fH8OABQ6kisxSHy4g+QU6QCRZruzewNO7hDz3Pa0DB5Ecz+sODHwzbVFKY2EcKQb2q+U4Yg==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
